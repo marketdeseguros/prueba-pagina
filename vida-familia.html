@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c3361">
+  <title>Seguros de Vida, Retiro y Ahorro | Market de Seguros</title>
+  <meta name="description" content="Protege el futuro de tu familia, planea tu retiro con PPR y asegura la educación de tus hijos con Market de Seguros.">
+  <link rel="icon" type="image/png" href="./img/icon-market.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./subpaginas.css">
+  <script src="./subpaginas.js" defer></script>
+  <script src="./solicitudes.js" defer></script>
+  <script src="./menu-header.js" defer></script>
+</head>
+<body class="subpagina">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="container navigation">
+      <a class="brand" href="./index.html" aria-label="Market de Seguros, inicio">
+        <img src="./img/market-logo.png" alt="Market de Seguros" style="width:150px; max-width:28vw; height:auto;">
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="./personas.html" aria-current="page">Personas</a>
+        <a href="./empresa.html">Empresas</a>
+        <a href="./escuela.html">Escolar</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./recursos.html">Blog</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+      <a class="button button-navy header-quote" href="https://wa.me/527771193499?text=Hola,%20deseo%20cotizar%20en%20línea">Cotizar en línea</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <span data-icon="menu" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" hidden>
+      <a href="./personas.html" aria-current="page">Personas</a>
+      <a href="./empresa.html">Empresas</a>
+      <a href="./escuela.html">Escolar</a>
+      <a href="./nosotros.html">Nosotros</a>
+      <a href="./recursos.html">Blog</a>
+      <a href="./contacto.html">Contacto</a>
+      <a href="#vida-familia-detalle">Cotizar en línea</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <nav class="container sp-ruta" aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./personas.html">Personas</a></li>
+        <li aria-current="page">Vida y Familia</li>
+      </ol>
+    </nav>
+
+    <section class="container sp-portada" aria-labelledby="vida-title">
+      <div>
+        <p class="eyebrow">PROTECCIÓN Y PATRIMONIO</p>
+        <h1 id="vida-title">
+          Cuidar de los tuyos también
+          <span>es hacer planes a futuro.</span>
+        </h1>
+        <p class="sp-portada-texto">
+          La protección económica de tu familia, la universidad de tus hijos y tu propio retiro son metas que merecen una estrategia clara. Explora nuestras opciones especializadas.
+        </p>
+        <div class="sp-accion">
+          <a class="button button-navy" href="#vida-familia-detalle">
+            Explorar opciones de vida y ahorro
+            <span data-icon="arrow-right" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+      <figure class="sp-portada-imagen">
+        <img src="./img/img-familia.svg" alt="Familia feliz pasando un día juntos" width="1200" height="900" fetchpriority="high">
+      </figure>
+    </section>
+
+    <nav class="sp-indice" aria-label="Secciones de vida y familia">
+      <div class="container">
+        <a href="#modalidades-vida">Nuestros 7 planes</a>
+        <a href="#vida-familia-detalle">Solicitar propuesta</a>
+        <a href="#preguntas-vida">Preguntas frecuentes</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <p class="sp-estado" id="formularios-estado" role="status" hidden>
+        No pudimos cargar el formulario. Actualiza la página o <a href="./contacto.html">contacta a nuestro equipo</a>.
+      </p>
+
+      <section class="sp-seccion" id="modalidades-vida" aria-labelledby="mod-vida-titulo">
+        <p class="eyebrow">SOLUCIONES ESPECIALIZADAS</p>
+        <h2 id="mod-vida-titulo">Elige el objetivo que deseas asegurar hoy</h2>
+        
+        <div class="sp-tarjetas" style="margin-top: 24px; grid-template-columns: repeat(3, minmax(0, 1fr));">
+          <article class="sp-tarjeta">
+            <div>
+              <p class="eyebrow">FUTURO ASEGURADO</p>
+              <h3>Retiro y PPR</h3>
+              <p>Construye tu fondo de retiro con beneficios fiscales y aportaciones constantes para disfrutar con tranquilidad.</p>
+              <button class="text-link" type="button" data-producto="Vida y familia" data-plan="Retiro" data-solicitud disabled style="background:none;border:0;padding:0;margin-top:14px;cursor:pointer;">
+                Cotizar Retiro <span data-icon="arrow-right" aria-hidden="true"></span>
+              </button>
+            </div>
+          </article>
+          <article class="sp-tarjeta">
+            <div>
+              <p class="eyebrow">ESTUDIOS</p>
+              <h3>Plan Educativo</h3>
+              <p>Garantiza los recursos universitarios de tus hijos sin importar los imprevistos de la vida.</p>
+              <button class="text-link" type="button" data-producto="Vida y familia" data-plan="Educativo" data-solicitud disabled style="background:none;border:0;padding:0;margin-top:14px;cursor:pointer;">
+                Cotizar Educativo <span data-icon="arrow-right" aria-hidden="true"></span>
+              </button>
+            </div>
+          </article>
+          <article class="sp-tarjeta">
+            <div>
+              <p class="eyebrow">RESPALDO</p>
+              <h3>Vida Premia</h3>
+              <p>Protección patrimonial con opciones flexibles de ahorro y vigencia de acuerdo con tus metas.</p>
+              <button class="text-link" type="button" data-producto="Vida y familia" data-plan="Vida Premia" data-solicitud disabled style="background:none;border:0;padding:0;margin-top:14px;cursor:pointer;">
+                Cotizar Vida Premia <span data-icon="arrow-right" aria-hidden="true"></span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="sp-tarjetas" style="margin-top: 16px; grid-template-columns: repeat(4, minmax(0, 1fr));">
+          <article class="sp-tarjeta">
+            <div>
+              <h3>Servicios Funerarios</h3>
+              <p>Prevé trámites y gastos en momentos difíciles.</p>
+              <button class="text-link" type="button" data-producto="Vida y familia" data-plan="Servicios Funerarios" data-solicitud disabled style="background:none;border:0;padding:0;margin-top:10px;cursor:pointer;">Cotizar <span data-icon="arrow-right" aria-hidden="true"></span></button>
+            </div>
+          </article>
+          <article class="sp-tarjeta">
+            <div>
+              <h3>PPR (Fiscal)</h3>
+              <p>Deduce impuestos mientras ahorras para tu retiro.</p>
+              <button class="text-link" type="button" data-producto="Vida y familia" data-plan="PPR" data-solicitud disabled style="background:none;border:0;padding:0;margin-top:10px;cursor:pointer;">Cotizar <span data-icon="arrow-right" aria-hidden="true"></span></button>
+            </div>
+          </article>
+          <article class="sp-tarjeta">
+            <div>
+              <h3>Vida Temporal</h3>
+              <p>Protección por plazos definidos (10, 20 o 25 años).</p>
+              <button class="text-link" type="button" data-producto="Vida y familia" data-plan="Vida Temporal" data-solicitud disabled style="background:none;border:0;padding:0;margin-top:10px;cursor:pointer;">Cotizar <span data-icon="arrow-right" aria-hidden="true"></span></button>
+            </div>
+          </article>
+          <article class="sp-tarjeta">
+            <div>
+              <h3>Pagos Limitados</h3>
+              <p>Paga en pocos años y mantén protección vitalicia.</p>
+              <button class="text-link" type="button" data-producto="Vida y familia" data-plan="Vida Pagos Limitados" data-solicitud disabled style="background:none;border:0;padding:0;margin-top:10px;cursor:pointer;">Cotizar <span data-icon="arrow-right" aria-hidden="true"></span></button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="sp-producto" id="vida-familia-detalle" data-categoria="personas" data-nombre="Vida y familia" aria-labelledby="vida-detalle-titulo">
+        <div class="sp-titulo">
+          <div class="product-icon">
+            <img src="./img/iconos/icono-familia.png" alt="" loading="lazy">
+          </div>
+          <p class="eyebrow">SOLICITA TU PROPUESTA</p>
+          <h2 id="vida-detalle-titulo">¿Listo para diseñar tu plan de vida?</h2>
+        </div>
+        <div class="sp-contenido">
+          <p class="sp-intro">
+            Selecciona el producto de tu interés en nuestro formulario general de vida y un asesor te ayudará a calcular la aportación ideal para tu presupuesto.
+          </p>
+          <div class="sp-datos">
+            <strong>Asesoría personalizada</strong>
+            Te ayudamos a comparar rendimientos estimados, plazos, sumas aseguradas por fallecimiento o invalidez y beneficios fiscales vigentes.
+          </div>
+          <div class="sp-accion">
+            <button class="button button-navy" type="button" data-producto="Vida y familia" data-solicitud disabled aria-haspopup="dialog" aria-controls="product-dialog">
+              Solicitar propuesta general de vida
+              <span data-icon="arrow-right" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="sp-faq" id="preguntas-vida" aria-labelledby="faq-vida-title">
+        <h2 id="faq-vida-title">Preguntas frecuentes sobre seguros de vida y retiro</h2>
+        <details class="sp-pregunta">
+          <summary>¿Qué beneficios fiscales tiene un PPR?</summary>
+          <p>Los Planes Personales de Retiro permiten deducir de tus impuestos anuales hasta el 10% de tus ingresos acumulables, fomentando el ahorro para tu vejez con apoyo del gobierno.</p>
+        </details>
+      </section>
+
+      <p class="sp-condiciones">
+        Las proyecciones de ahorro y rendimientos son estimaciones basadas en las condiciones del plan. Solicitar una cotización no compromete contratación.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand brand-white" href="./index.html" aria-label="Market de Seguros, inicio">
+            <img src="./img/market-blanco.png" alt="Market de Seguros" style="width:150px; height:auto;">
+          </a>
+        </div>
+        <div class="footer-column">
+          <h2>Tu protección</h2>
+          <a href="./personas.html">Personas y familias</a>
+          <a href="./empresa.html">Empresas y negocios</a>
+          <a href="./escuela.html">Comunidad escolar</a>
+        </div>
+        <div class="footer-column">
+          <h2>Estamos cerca</h2>
+          <a href="./nosotros.html">Conoce Market</a>
+          <a href="./seguro-auto.html">Cotiza en línea ↗</a>
+          <a href="https://www.facebook.com/segurosyfianzasmultimarca" target="_blank" rel="noopener noreferrer">Síguenos en Facebook ↗</a>
+        </div>
+        <div class="footer-column footer-address">
+          <h2>Visítanos en Morelos</h2>
+          <p>Av. Plan de Ayala 1759, local B-20.<br>Plaza Cascada, col. Jacarandas, 62420.<br>Cuernavaca, Morelos.</p>
+          <a href="tel:+527771193499">777 119 34 99</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Market de Seguros. Todos los derechos reservados.</p>
+        <a href="./avisoprivacidad.html">Aviso de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="product-dialog" class="product-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <button id="close-dialog" class="dialog-close" type="button" aria-label="Cerrar formulario">
+      <span data-icon="x" aria-hidden="true"></span>
+    </button>
+    <div id="dialog-icon" class="product-icon"></div>
+    <p class="eyebrow">SOLICITUD DE COTIZACIÓN</p>
+    <h2 id="dialog-title"></h2>
+    <p id="dialog-description"></p>
+    <a id="dialog-email" class="button button-navy" hidden>Solicitar cotización</a>
+  </dialog>
+</body>
+</html>

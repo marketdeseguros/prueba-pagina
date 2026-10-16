@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c3361">
+
+  <title>Market de Seguros</title>
+
+  <meta
+    name="description"
+    content="Encuentra seguros para ti, tu familia, tu empresa y tu escuela. En Market de Seguros te acompañamos a elegir con asesoría personal en todo México."
+  >
+
+  <meta property="og:title" content="Market de Seguros">
+
+  <meta
+    property="og:description"
+    content="Tu vida, tus planes, tu tranquilidad. Seguros para personas, empresas y escuelas con asesoría cercana."
+  >
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="./img/icon-market.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+  <script src="./solicitudes.js" defer></script>
+  <script src="./menu-header.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="container navigation">
+
+      <a
+        class="brand"
+        href="#inicio"
+        aria-label="Market de Seguros, inicio"
+      >
+        <img
+          src="./img/market-logo.png"
+          alt="Market de Seguros"
+          style="width:150px; max-width:28vw; height:auto;"
+        >
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="./personas.html">Personas</a>
+        <a href="./empresa.html">Empresas</a>
+        <a href="./escuela.html">Escolar</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./recursos.html">Blog</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+
+      <a
+        class="button button-navy header-quote"
+        href="https://wa.me/527771193499?text=Hola,%20deseo%20cotizar%20en%20línea"
+      >
+        Cotizar en línea
+        <span data-icon="arrow-up-right" aria-hidden="true"></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <span data-icon="menu" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav
+      class="mobile-nav"
+      id="mobile-nav"
+      aria-label="Navegación móvil"
+      hidden
+    >
+      <a href="./personas.html">Personas</a>
+      <a href="./empresa.html">Empresas</a>
+      <a href="./escuela.html">Escolar</a>
+      <a href="./nosotros.html">Nosotros</a>
+      <a href="./recursos.html">Blog</a>
+      <a href="./contacto.html">Contacto</a>
+      <a href="https://wa.me/527771193499?text=Hola,%20deseo%20cotizar%20en%20línea">Cotizar en línea ↗</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- PRESENTACIÓN -->
+    <section
+      class="hero container"
+      id="inicio"
+      aria-labelledby="hero-title"
+    >
+      <div class="hero-copy">
+        <h1 id="hero-title">
+          ¡En Market<br>
+          de Seguros,<br>
+          <span>seguro está!</span>
+        </h1>
+
+        <p class="hero-description">
+          Tu familia, tus planes, tu negocio. Encuentra el seguro
+          que va contigo y la asesoría que necesitas para elegir
+          con tranquilidad.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-navy" href="#seguros">
+            Encuentra tu seguro
+            <span data-icon="arrow-right" aria-hidden="true"></span>
+          </a>
+
+          <a class="text-link" href="https://wa.me/527771193499?text=Hola,%20necesito%20asesoría%20para%20elegir%20un%20seguro">
+            Hablemos
+            <span data-icon="arrow-up-right" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <p class="hero-note"></p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-photo-wrap">
+          <img
+            class="hero-photo"
+            src="./img/familia1.svg"
+            alt="Una familia disfruta un momento de juego y cariño en el jardín"
+            width="1536"
+            height="1024"
+            fetchpriority="high"
+          >
+        </div>
+
+        <div class="photo-caption">
+          <span data-icon="heart" aria-hidden="true"></span>
+
+          <p>
+            La tranquilidad de cuidar<br>
+            <strong>a quienes más quieres.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACOMPAÑAMIENTO -->
+    <div class="assurance container" aria-label="Así te acompañamos">
+      <div>
+        <span
+          class="assurance-icon"
+          data-icon="messages"
+          aria-hidden="true"
+        ></span>
+
+        <p>
+          <strong>Asesoría de persona a persona</strong>
+          <span>Te escuchamos antes de recomendarte.</span>
+        </p>
+      </div>
+
+      <div>
+        <span
+          class="assurance-icon"
+          data-icon="layers"
+          aria-hidden="true"
+        ></span>
+
+        <p>
+          <strong>Opciones para tu vida cotidiana</strong>
+          <span>Escuchamos tus necesidades y presupuesto.</span>
+        </p>
+      </div>
+
+      <div>
+        <span
+          class="assurance-icon"
+          data-icon="hand-heart"
+          aria-hidden="true"
+        ></span>
+
+        <p>
+          <strong>Acompañamiento cercano</strong>
+          <span>Al elegir y durante tu protección.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- MARKETPLACE -->
+    <section
+      class="products-section"
+      id="seguros"
+      aria-labelledby="products-title"
+    >
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TUS PRIORIDADES, TU PROTECCIÓN</p>
+            <h2 id="products-title">¿Qué te gustaría cuidar?</h2>
+          </div>
+
+          <p>
+            Cada etapa tiene algo importante.<br>
+            Encuentra por dónde empezar.
+          </p>
+        </div>
+
+        <div
+          class="product-tabs"
+          role="tablist"
+          aria-label="Seguros por tipo de necesidad"
+        >
+          <button
+            id="tab-personas"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-personas"
+            data-tab="personas"
+          >
+            <span data-icon="heart" aria-hidden="true"></span>
+            Personas
+          </button>
+
+          <button
+            id="tab-empresas"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-empresas"
+            data-tab="empresas"
+            tabindex="-1"
+          >
+            <span data-icon="building" aria-hidden="true"></span>
+            Empresa
+          </button>
+
+          <button
+            id="tab-escuelas"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-escuelas"
+            data-tab="escuelas"
+            tabindex="-1"
+          >
+            <span data-icon="graduation" aria-hidden="true"></span>
+            Escuela
+          </button>
+        </div>
+
+        <!-- LAS TARJETAS SE GENERAN DESDE APP.JS -->
+        <div
+          id="panel-personas"
+          class="product-grid"
+          role="tabpanel"
+          aria-labelledby="tab-personas"
+          tabindex="0"
+        ></div>
+
+        <div
+          id="panel-empresas"
+          class="product-grid"
+          role="tabpanel"
+          aria-labelledby="tab-empresas"
+          tabindex="0"
+          hidden
+        ></div>
+
+        <div
+          id="panel-escuelas"
+          class="product-grid"
+          role="tabpanel"
+          aria-labelledby="tab-escuelas"
+          tabindex="0"
+          hidden
+        ></div>
+
+        <noscript>
+          <p>
+            Te asesoramos en seguros de auto, vida, gastos médicos,
+            hogar, viajes, retiro, accidentes personales, mascotas,
+            flotillas, empresas y escuelas.
+            <a href="mailto:ventas@marketdeseguros.com">
+              Escríbenos para conocer tus opciones.
+            </a>
+          </p>
+        </noscript>
+
+        <div class="product-help">
+          <span data-icon="messages" aria-hidden="true"></span>
+
+          <p>
+            ¿No sabes cuál elegir?
+            <a
+              href="https://wa.me/527771193499?text=Hola,%20necesito%20asesoría%20para%20elegir%20un%20seguro"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lo platicamos contigo.
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEGUROS PARA ESCUELAS -->
+    <section
+      class="school-section container"
+      id="escuelas"
+      aria-labelledby="school-title"
+    >
+      <div class="school-copy">
+        <p class="eyebrow">PROTEGE A TU COMUNIDAD ESCOLAR</p>
+
+        <h2 id="school-title">
+          Que aprender<br>
+          siga siendo lo<br>
+          <span>más importante.</span>
+        </h2>
+
+        <p>
+          Hay mucho detrás de cada día de clases. Conoce las opciones
+          para cuidar a tus alumnos, a tus docentes y a tu institución.
+        </p>
+
+        <div class="school-tags">
+          <span>Accidentes escolares</span>
+          <span>Continuidad escolar</span>
+          <span>Intercambios Escolares</span>
+          <span>Responsabilidad civil</span>
+          <span>Estancias Infantiles</span>
+          <span>Y mucho más...</span>
+        </div>
+
+        <button
+          class="button button-white"
+          id="school-options"
+          type="button"
+        >
+          Explora los seguros para escuelas
+          <span data-icon="arrow-up-right" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="school-visual">
+        <img
+          src="./img/escuela1.svg"
+          alt="Una maestra ayuda a su alumna con una actividad escolar"
+          width="1536"
+          height="1024"
+          loading="lazy"
+        >
+
+        <div class="school-photo-label">
+          <span data-icon="graduation" aria-hidden="true"></span>
+
+          <span>
+            Grandes sueños.<br>
+            <strong>Pequeños protagonistas.</strong>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section
+      class="about-section container"
+      id="nosotros"
+      aria-labelledby="about-title"
+    >
+      <div class="about-copy">
+        <p class="eyebrow">SOMOS MARKET DE SEGUROS</p>
+
+        <h2 id="about-title">
+          Elegir bien empieza<br>
+          por <span>sentirte escuchado.</span>
+        </h2>
+
+        <p>
+          Detrás de cada póliza hay una historia. La tuya,
+          la de tu familia o la del negocio que has construido.
+        </p>
+
+        <p>
+          Por eso, antes de hablar de seguros, hablamos de ti.
+          Te ayudamos a entender tus opciones y a elegir una
+          protección que tenga sentido para tu vida.
+        </p>
+
+        <a class="text-link" href="#contacto">
+          Conversemos sobre tus planes
+          <span data-icon="arrow-up-right" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <ol class="steps">
+        <li>
+          <span class="step-number">01</span>
+
+          <div>
+            <h3>Cuéntanos qué te importa</h3>
+            <p>
+              Conocemos tus necesidades, tus prioridades
+              y lo que quieres cuidar.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <span class="step-number">02</span>
+
+          <div>
+            <h3>Entiende tus opciones</h3>
+            <p>
+              Revisamos contigo coberturas, condiciones
+              y presupuesto, con palabras claras.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <span class="step-number">03</span>
+
+          <div>
+            <h3>Decide acompañado</h3>
+            <p>
+              Te orientamos al contratar y durante la vigencia de
+              tu seguro, también sobre los pasos a seguir ante
+              un siniestro.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- BLOG -->
+    <section
+      class="blog-section"
+      id="blog"
+      aria-labelledby="blog-title"
+    >
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">BLOG DE MARKET</p>
+            <h2 id="blog-title">Información para decidir mejor.</h2>
+          </div>
+        </div>
+
+        <article
+          class="blog-feature"
+          aria-labelledby="blog-article-title"
+        >
+          <div class="blog-intro">
+            <div class="product-icon">
+              <span data-icon="book" aria-hidden="true"></span>
+            </div>
+
+            <p class="eyebrow">GUÍA PRÁCTICA</p>
+
+            <h3 id="blog-article-title">
+              Antes de contratar, empieza por estas tres preguntas.
+            </h3>
+
+            <p>
+              Elegir un seguro empieza por entender tus necesidades
+              y las condiciones de cada opción.
+            </p>
+
+            <a class="text-link" href="#contacto">
+              Resuelve tus dudas con un asesor
+              <span data-icon="arrow-up-right" aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <div class="blog-guide">
+            <details open>
+              <summary>
+                ¿Qué necesito proteger?
+                <span data-icon="arrow-right" aria-hidden="true"></span>
+              </summary>
+
+              <p>
+                Piensa en las personas que dependen de ti,
+                los bienes que utilizas y las actividades que
+                realizas. Tu etapa de vida y tus prioridades
+                ayudan a definir qué opciones revisar.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                ¿Qué incluye y qué debo pagar?
+                <span data-icon="arrow-right" aria-hidden="true"></span>
+              </summary>
+
+              <p>
+                Además del precio, revisa las coberturas, la suma
+                asegurada, los deducibles, el coaseguro cuando
+                aplique y las exclusiones. Pide que te expliquen
+                las diferencias entre las opciones que estás
+                considerando.
+              </p>
+            </details>
+
+            <details>
+              <summary>
+                ¿Qué hago si necesito usarlo?
+                <span data-icon="arrow-right" aria-hidden="true"></span>
+              </summary>
+
+              <p>
+                Ubica el teléfono de asistencia de tu aseguradora,
+                ten a mano tu número de póliza y conoce el
+                procedimiento para reportar un siniestro.
+                Tu asesor puede orientarte sobre los pasos y
+                documentos que correspondan a tu caso.
+              </p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section
+      class="contact-section"
+      id="contacto"
+      aria-labelledby="contact-title"
+    >
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <p class="eyebrow">EMPECEMOS CON UNA CONVERSACIÓN</p>
+
+          <h2 id="contact-title">
+            Lo que te importa<br>
+            merece <span>un buen plan.</span>
+          </h2>
+
+          <p>Estamos aquí para ayudarte a encontrarlo.</p>
+
+          <a
+            class="button button-navy"
+            href="mailto:ventas@marketdeseguros.com?subject=Quiero%20asesor%C3%ADa%20sobre%20un%20seguro"
+          >
+            Escríbenos
+            <span data-icon="arrow-up-right" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div class="contact-details">
+          <a class="contact-item" href="tel:+527775120283">
+            <span
+              class="contact-icon"
+              data-icon="phone"
+              aria-hidden="true"
+            ></span>
+
+            <span>
+              <small>Hablemos por teléfono</small>
+              <strong>777 512 02 83</strong>
+            </span>
+
+            <span data-icon="arrow-up-right" aria-hidden="true"></span>
+          </a>
+
+          <a
+            class="contact-item"
+            href="mailto:ventas@marketdeseguros.com"
+          >
+            <span
+              class="contact-icon"
+              data-icon="mail"
+              aria-hidden="true"
+            ></span>
+
+            <span>
+              <small>Cuéntanos lo que necesitas</small>
+              <strong>ventas@marketdeseguros.com</strong>
+            </span>
+
+            <span data-icon="arrow-up-right" aria-hidden="true"></span>
+          </a>
+
+          <div class="contact-hours">
+            <span data-icon="clock" aria-hidden="true"></span>
+
+            <p>
+              Lunes a viernes · 9:00–14:00 y 15:00–18:00<br>
+              Sábados · 9:00–14:00<br>
+              <span>Horario del centro de México.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a
+            class="brand brand-white"
+            href="#inicio"
+            aria-label="Market de Seguros, inicio"
+          >
+            <img
+              src="./img/market-blanco.png"
+              alt="Market de Seguros"
+              style="width:150px; height:auto;"
+            >
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Tu protección</h2>
+
+          <a href="./personas.html" data-select-tab="personas">
+            Personas y familias
+          </a>
+
+          <a href="./empresa.html" data-select-tab="empresas">
+            Empresas y negocios
+          </a>
+
+          <a href="./escuela.html" data-select-tab="escuelas">
+            Comunidad escolar
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Estamos cerca</h2>
+
+          <a href="./nosotros.html">Conoce Market</a>
+
+          <a href="./seguro-auto.html">Cotiza en línea ↗</a>
+
+          <a
+            href="https://www.facebook.com/segurosyfianzasmultimarca"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Síguenos en Facebook ↗
+            <span class="sr-only"> (abre otra pestaña)</span>
+          </a>
+        </div>
+
+        <div class="footer-column footer-address">
+          <h2>Visítanos en Morelos</h2>
+
+          <p>
+            Av. Plan de Ayala 1759, local B-20.<br>
+            Plaza Cascada, col. Jacarandas, 62420.<br>
+            Cuernavaca, Morelos.
+          </p>
+
+          <a href="tel:+527771193499">777 119 34 99</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © <span id="year">2026</span> Market de Seguros.
+          Todos los derechos reservados.
+        </p>
+
+        <a href="./avisoprivacidad.html">Aviso de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INFORMACIÓN DEL PRODUCTO Y FORMULARIO -->
+  <dialog
+    id="product-dialog"
+    class="product-dialog"
+    aria-labelledby="dialog-title"
+    aria-describedby="dialog-description"
+  >
+    <button
+      id="close-dialog"
+      class="dialog-close"
+      type="button"
+      aria-label="Cerrar información del seguro"
+    >
+      <span data-icon="x" aria-hidden="true"></span>
+    </button>
+
+    <div id="dialog-icon" class="product-icon"></div>
+
+    <p class="eyebrow" id="dialog-category"></p>
+
+    <h2 id="dialog-title"></h2>
+
+    <p id="dialog-description"></p>
+
+    <div class="dialog-guide">
+      <h3>Lo revisamos contigo</h3>
+      <ul id="dialog-points"></ul>
+    </div>
+
+    <p class="dialog-disclaimer">
+      Las opciones y condiciones varían según la aseguradora
+      y el plan. Tu asesor te ayudará a revisar los detalles
+      antes de contratar.
+    </p>
+
+    <!--
+      solicitudes.js inserta aquí el formulario de cada producto.
+      Para Auto se muestra el enlace al multicotizador.
+    -->
+
+    <a
+      id="dialog-email"
+      class="button button-navy"
+      href="./seguro-auto.html"
+    >
+      Cotizar mi auto
+      <span data-icon="arrow-up-right" aria-hidden="true"></span>
+    </a>
+  </dialog>
+
+  <script>
+    // Selecciona la categoría al regresar desde una subpágina.
+    document.addEventListener('DOMContentLoaded', function () {
+      const categoria = new URLSearchParams(
+        window.location.search
+      ).get('categoria');
+
+      if (
+        ['personas', 'empresas', 'escuelas'].includes(categoria) &&
+        typeof selectTab === 'function'
+      ) {
+        selectTab(categoria);
+      }
+    });
+  </script>
+</body>
+</html>

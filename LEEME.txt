@@ -1,0 +1,43 @@
+MARKET DE SEGUROS — CÓDIGO DE LA PÁGINA DE INICIO
+
+Esta entrega contiene la página de inicio aprobada, con el menú:
+Personas, Empresas, Nosotros, Blog y Contacto.
+
+CÓMO VERLA
+1. Descomprime el archivo ZIP completo.
+2. Abre la carpeta market-de-seguros-inicio.
+3. Abre index.html en un navegador moderno, como Chrome o Edge.
+Mantén los archivos y la carpeta assets juntos para que carguen los estilos,
+las funciones y las fotografías. No requiere instalación ni compilación.
+
+ARCHIVOS
+- index.html: estructura y textos de la página de inicio.
+- styles.css: colores, tipografía, distribución y adaptación a celular.
+- app.js: catálogo de seguros, pestañas, ventanas de información y menú móvil.
+- assets/familia.webp: fotografía principal.
+- assets/escuela.webp: fotografía de la sección escolar.
+
+DÓNDE EDITAR
+- Textos de inicio, navegación, nosotros, blog y contacto: index.html.
+- Nombres, descripciones y detalles de los seguros: productos en app.js.
+- Apariencia de la página: styles.css.
+
+FUNCIONAMIENTO ACTUAL
+Personas y Empresas seleccionan su categoría en el catálogo de inicio.
+Nosotros, Blog y Contacto llevan a secciones de esta misma página.
+Las páginas independientes se planearán en una siguiente etapa.
+
+Las cotizaciones por correo abren la aplicación de correo del visitante.
+El botón Cotizar en línea abre la plataforma externa actual de Market.
+No se incluye un sistema de recepción de formularios ni una base de datos.
+Los enlaces a plataformas externas necesitan conexión a internet.
+
+IDENTIDAD
+Se conserva el diseño y el tono aprobados para la página de inicio.
+No se incluyen logos de aseguradoras.
+Las dos fotografías incluidas se generaron para este diseño.
+
+ENTREGA A UNA DISEÑADORA O DESARROLLADOR
+Comparte el ZIP completo. El código usa HTML, CSS y JavaScript estándar.
+Las rutas a estilos, funciones e imágenes son relativas para que esta copia
+pueda abrirse localmente o colocarse dentro de una carpeta de alojamiento.

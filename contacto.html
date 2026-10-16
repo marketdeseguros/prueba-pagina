@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c3361">
+
+  <title>Contacto</title>
+
+  <meta
+    name="description"
+    content="Encuentra nuestros medios de contacto, dirección y horario. Envíanos un mensaje para recibir orientación sobre tus seguros."
+  >
+
+  <link rel="icon" type="image/png" href="./img/icon-market.png">
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./subpaginas.css">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+
+  <script src="./subpaginas.js" defer></script>
+  <script src="./menu-header.js" defer></script>
+</head>
+
+<body class="subpagina">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="container navigation">
+      <a
+        class="brand"
+        href="./index.html"
+        aria-label="Market de Seguros, inicio"
+      >
+        <img
+          src="./img/market-logo.png"
+          alt="Market de Seguros"
+          style="width:150px; max-width:28vw; height:auto;"
+        >
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="./personas.html">Personas</a>
+        <a href="./empresa.html">Empresas</a>
+        <a href="./escuela.html">Escolar</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./recursos.html">Blog</a>
+        <a href="./contacto.html" aria-current="page">Contacto</a>
+      </nav>
+
+      <a
+        class="button button-navy header-quote"
+        href="https://wa.me/527771193499?text=Hola,%20deseo%20cotizar%20en%20línea">
+        Cotizar en línea
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <span data-icon="menu" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav
+      class="mobile-nav"
+      id="mobile-nav"
+      aria-label="Navegación móvil"
+      hidden
+    >
+      <a href="./personas.html">Personas</a>
+      <a href="./empresa.html">Empresas</a>
+      <a href="./escuela.html">Escolar</a>
+      <a href="./nosotros.html">Nosotros</a>
+      <a href="./recursos.html">Blog</a>
+      <a href="./contacto.html" aria-current="page">Contacto</a>
+      <a href="./index.html#seguros">Cotizar en línea</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <nav class="container sp-ruta" aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="./index.html">Inicio</a></li>
+        <li aria-current="page">Contacto</li>
+      </ol>
+    </nav>
+
+    <!-- PORTADA -->
+    <section
+      class="container sp-portada"
+      aria-labelledby="pagina-titulo"
+    >
+      <div>
+        <p class="eyebrow">ESTAMOS CERCA</p>
+
+        <h1 id="pagina-titulo">
+          Hablemos de lo que
+          <span>necesitas proteger.</span>
+        </h1>
+
+        <p class="sp-portada-texto">
+          ¿Tienes dudas sobre un seguro o necesitas orientación?
+          Comparte tu mensaje con nosotros y cuéntanos cómo podemos ayudarte.
+        </p>
+
+        <a class="button button-navy" href="#contacto">
+          Escribir un mensaje
+          <span data-icon="arrow-right" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <!-- Puedes cambiar src por una fotografía de tu oficina -->
+      <figure class="sp-portada-imagen">
+        <img
+          src="https://images.unsplash.com/photo-1758876202124-cc941ebb8446?auto=format&amp;fit=crop&amp;w=1200&amp;q=82"
+          alt="Una persona conversa por teléfono junto a su computadora"
+          width="1200"
+          height="900"
+          fetchpriority="high"
+        >
+        <figcaption>Fotografía ilustrativa.</figcaption>
+      </figure>
+    </section>
+
+    <section
+      class="container sp-contacto"
+      id="contacto"
+      aria-labelledby="contacto-titulo"
+    >
+      <!-- DATOS DE CONTACTO -->
+      <div>
+        <p class="eyebrow">CONTACTA A MARKET</p>
+
+        <h2 id="contacto-titulo">
+          Empecemos con una conversación.
+        </h2>
+
+        <dl>
+          <dt>Por teléfono</dt>
+          <dd>
+            <a href="tel:+527771193499">777 119 34 99</a>
+          </dd>
+
+          <dt>Por correo electrónico</dt>
+          <dd>
+            <a href="mailto:ventas@marketdeseguros.com">
+              ventas@marketdeseguros.com
+            </a>
+          </dd>
+
+          <dt>Visítanos en Morelos</dt>
+          <dd>
+            <address>
+              Av. Plan de Ayala 1759, local B-20.<br>
+              Plaza Cascada, col. Jacarandas, C.P. 62420.<br>
+              Cuernavaca, Morelos.
+            </address>
+          </dd>
+
+          <dt>Horario de atención</dt>
+          <dd>
+            Lunes a viernes: 9:00–14:00 y 15:00–18:00.<br>
+            Sábados: 9:00–14:00.<br>
+            Horario del centro de México.
+          </dd>
+        </dl>
+
+        <p class="sp-fuente">
+          <a
+            href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Plan%20de%20Ayala%201759%20Plaza%20Cascada%20Cuernavaca%20Morelos%2062420"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Buscar la dirección en Google Maps
+            <span class="sr-only"> (abre otra pestaña)</span>
+          </a>
+        </p>
+
+        <div class="sp-datos">
+          <strong>¿Buscas una cotización?</strong>
+          Elige tu seguro para completar los datos de ese producto:
+          <a href="./personas.html">Personas</a>,
+          <a href="./empresa.html">Empresas</a> o
+          <a href="./escuela.html">Escolar</a>.
+        </div>
+      </div>
+
+      <!-- FORMULARIO -->
+      <div class="sp-formulario">
+        <h2 id="form-titulo">Déjanos tu mensaje.</h2>
+
+        <p class="sp-meta">
+          Los campos con * son obligatorios. El teléfono es opcional.
+        </p>
+
+        <!-- Aquí puedes cambiar el correo destinatario -->
+        <form
+          id="form-contacto"
+          action="https://formsubmit.co/ajax/ventas@marketdeseguros.com"
+          method="post"
+          aria-labelledby="form-titulo"
+        >
+          <fieldset id="contacto-campos" disabled>
+            <legend class="sr-only">Datos de contacto</legend>
+
+            <!-- Campo de control antispam -->
+            <div class="sp-trampa" aria-hidden="true">
+              <input
+                type="text"
+                name="_honey"
+                tabindex="-1"
+                autocomplete="off"
+                aria-label="Dejar vacío"
+              >
+            </div>
+
+            <div class="sp-campos">
+              <div class="sp-campo sp-completo">
+                <label for="contacto-nombre">Nombre completo *</label>
+
+                <input
+                  id="contacto-nombre"
+                  name="Nombre"
+                  autocomplete="name"
+                  required
+                  minlength="2"
+                  maxlength="120"
+                >
+              </div>
+
+              <div class="sp-campo">
+                <label for="contacto-email">Correo electrónico *</label>
+
+                <input
+                  id="contacto-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  maxlength="254"
+                >
+              </div>
+
+              <div class="sp-campo">
+                <label for="contacto-telefono">
+                  Teléfono (opcional)
+                </label>
+
+                <input
+                  id="contacto-telefono"
+                  name="Telefono"
+                  type="tel"
+                  autocomplete="tel"
+                  maxlength="25"
+                >
+              </div>
+
+              <div class="sp-campo sp-completo">
+                <label for="contacto-motivo">
+                  Motivo de contacto *
+                </label>
+
+                <select
+                  id="contacto-motivo"
+                  name="Motivo"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Selecciona una opción
+                  </option>
+                  <option>Orientación sobre un seguro</option>
+                  <option>Seguimiento de una solicitud</option>
+                  <option>Atención sobre una póliza</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+
+              <div class="sp-campo sp-completo">
+                <label for="contacto-mensaje">Mensaje *</label>
+
+                <textarea
+                  id="contacto-mensaje"
+                  name="Mensaje"
+                  rows="5"
+                  required
+                  minlength="10"
+                  maxlength="3000"
+                  placeholder="Cuéntanos cómo podemos ayudarte."
+                ></textarea>
+              </div>
+            </div>
+
+            <label
+              class="sp-consentimiento"
+              for="contacto-privacidad"
+            >
+              <input
+                id="contacto-privacidad"
+                name="Privacidad"
+                type="checkbox"
+                value="Autorizo el uso de mis datos para atender mi mensaje."
+                required
+              >
+
+              <span>
+                He leído el
+                <a
+                  href="./avisoprivacidad.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  aviso de privacidad
+                  <span class="sr-only"> (abre otra pestaña)</span>
+                </a>
+                y autorizo el uso de mis datos para atender mi mensaje. *
+              </span>
+            </label>
+
+            <button
+              id="contacto-enviar"
+              class="button button-navy"
+              type="submit"
+            >
+              Enviar mensaje
+            </button>
+          </fieldset>
+
+          <p
+            id="contacto-estado"
+            class="sp-estado"
+            role="status"
+            aria-live="polite"
+            tabindex="-1"
+            hidden
+          ></p>
+
+          <noscript>
+            <p class="sp-datos">
+              Activa JavaScript para enviar el formulario o
+              <a href="mailto:ventas@marketdeseguros.com">
+                escríbenos por correo
+              </a>.
+            </p>
+          </noscript>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a
+            class="brand brand-white"
+            href="./index.html"
+            aria-label="Market de Seguros, inicio"
+          >
+            <img
+              src="./img/market-blanco.png"
+              alt="Market de Seguros"
+              style="width:150px; height:auto;"
+            >
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Tu protección</h2>
+          <a href="./personas.html">Personas y familias</a>
+          <a href="./empresa.html">Empresas y negocios</a>
+          <a href="./escuela.html">Comunidad escolar</a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Estamos cerca</h2>
+          <a href="./nosotros.html">Conoce Market</a>
+          <a href="./seguro-auto.html">Cotiza en línea ↗</a>
+          <a
+            href="https://www.facebook.com/segurosyfianzasmultimarca"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Síguenos en Facebook ↗
+            <span class="sr-only"> (abre otra pestaña)</span>
+          </a>
+        </div>
+
+        <div class="footer-column footer-address">
+          <h2>Visítanos en Morelos</h2>
+          <p>
+            Av. Plan de Ayala 1759, local B-20.<br>
+            Plaza Cascada, col. Jacarandas, 62420.<br>
+            Cuernavaca, Morelos.
+          </p>
+          <a href="tel:+527771193499">777 119 34 99</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © <span id="year">2026</span> Market de Seguros.
+          Todos los derechos reservados.
+        </p>
+        <a href="./avisoprivacidad.html">Aviso de privacidad</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

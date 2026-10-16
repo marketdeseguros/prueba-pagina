@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c3361">
+
+  <title>Aviso de privacidad | Market de Seguros</title>
+
+  <meta
+    name="description"
+    content="Aviso de privacidad de Grupo Vazra Consultores S.C. Consulta el tratamiento de tus datos personales y los medios para ejercer tus derechos ARCO."
+  >
+
+  <link rel="icon" type="image/png" href="./img/icon-market.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./subpaginas.js" defer></script>
+  <script src="./menu-header.js" defer></script>
+
+  <style>
+    .page-heading {
+      padding-block: 35px 45px;
+      background: var(--ice);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 29px;
+      color: var(--muted);
+      font-size: .875rem;
+    }
+
+    .breadcrumbs a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .breadcrumbs a:hover {
+      color: var(--navy);
+    }
+
+    .page-heading h1 {
+      color: var(--navy);
+      font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+      line-height: 1.12;
+      letter-spacing: -1.6px;
+      font-weight: 750;
+    }
+
+    .heading-rule {
+      width: 52px;
+      height: 4px;
+      margin-top: 23px;
+      border-radius: 2px;
+      background: var(--cyan);
+    }
+
+    .privacy-layout {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      align-items: start;
+      gap: clamp(36px, 6vw, 88px);
+      padding-block: 56px 80px;
+    }
+
+    .contents {
+      position: sticky;
+      top: 128px;
+      padding-left: 22px;
+      border-left: 3px solid var(--cyan);
+    }
+
+    .contents h2 {
+      margin-bottom: 16px;
+      color: var(--navy);
+      font-size: 1rem;
+    }
+
+    .contents ol {
+      display: grid;
+      gap: 6px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .contents a {
+      display: block;
+      padding-block: 7px;
+      color: var(--muted);
+      font-size: .875rem;
+      line-height: 1.5;
+      text-decoration: none;
+    }
+
+    .contents a:hover {
+      color: var(--navy);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .legal-copy {
+      width: 100%;
+      max-width: 790px;
+      min-width: 0;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .legal-section {
+      scroll-margin-top: 120px;
+    }
+
+    .legal-section + .legal-section {
+      margin-top: 35px;
+      padding-top: 33px;
+      border-top: 1px solid var(--line);
+    }
+
+    .legal-section h2 {
+      margin-bottom: 18px;
+      color: var(--navy);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -.45px;
+      line-height: 1.3;
+    }
+
+    .legal-section p + p {
+      margin-top: 18px;
+    }
+
+    .legal-section strong {
+      color: var(--navy);
+      font-weight: 650;
+    }
+
+    .legal-section ul {
+      padding-left: 23px;
+      margin-block: 15px 20px;
+    }
+
+    .legal-section li {
+      margin-top: 8px;
+      padding-left: 5px;
+    }
+
+    .legal-section li::marker {
+      color: var(--cyan-text);
+    }
+
+    .legal-section a {
+      color: var(--cyan-text);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere;
+    }
+
+    .legal-section a:hover {
+      color: var(--navy);
+    }
+
+    .icon-mask {
+      display: inline-block;
+      background: currentColor;
+      -webkit-mask: var(--icon-file) center / contain no-repeat;
+      mask: var(--icon-file) center / contain no-repeat;
+    }
+
+    @media (max-width: 800px) {
+      .privacy-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding-block: 35px 55px;
+      }
+
+      .contents {
+        position: static;
+        padding-left: 18px;
+      }
+
+      .contents ol {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3px 22px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page-heading {
+        padding-block: 24px 33px;
+      }
+
+      .legal-section h2 {
+        font-size: 1.375rem;
+      }
+
+      .legal-section + .legal-section {
+        margin-top: 28px;
+        padding-top: 28px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .contents ol {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">
+    Saltar al contenido
+  </a>
+
+  <header class="header">
+    <div class="container navigation">
+      <a
+        class="brand"
+        href="./index.html"
+        aria-label="Market de Seguros, inicio"
+      >
+        <img
+          src="./img/market-logo.png"
+          alt="Market de Seguros"
+          style="width:150px; max-width:28vw; height:auto;"
+        >
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="./personas.html">Personas</a>
+        <a href="./empresa.html">Empresas</a>
+        <a href="./escuela.html">Escolar</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./recursos.html">Blog</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+
+      <a
+        class="button button-navy header-quote"
+        href="https://wa.me/527771193499?text=Hola,%20deseo%20cotizar%20en%20línea"
+      >
+        Cotizar en línea
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <span data-icon="menu" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav
+      class="mobile-nav"
+      id="mobile-nav"
+      aria-label="Navegación móvil"
+      hidden
+    >
+      <a href="./personas.html">Personas</a>
+      <a href="./empresa.html">Empresas</a>
+      <a href="./escuela.html">Escolar</a>
+      <a href="./nosotros.html">Nosotros</a>
+      <a href="./recursos.html">Blog</a>
+      <a href="./contacto.html">Contacto</a>
+      <a href="./seguro-auto.html">Cotizar en línea</a>
+    </nav>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <div class="page-heading">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Ruta de navegación">
+          <a href="./index.html">Inicio</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Aviso de privacidad</span>
+        </nav>
+
+        <h1>Aviso de privacidad</h1>
+        <div class="heading-rule" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="container privacy-layout">
+      <aside class="contents" aria-labelledby="contents-title">
+        <h2 id="contents-title">Contenido</h2>
+
+        <nav aria-label="Apartados del aviso de privacidad">
+          <ol>
+            <li><a href="#responsable">Responsable y domicilio</a></li>
+            <li><a href="#finalidades">Finalidad de los datos recabados</a></li>
+            <li><a href="#datos-personales">Datos personales y cookies</a></li>
+            <li><a href="#datos-sensibles">Datos personales sensibles</a></li>
+            <li><a href="#transferencias">Transferencia de datos</a></li>
+            <li><a href="#derechos-arco">Derechos ARCO</a></li>
+            <li><a href="#seguridad">Medidas de seguridad</a></li>
+            <li><a href="#cambios">Cambios al aviso</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <div class="legal-copy">
+        <section class="legal-section" id="responsable" aria-labelledby="responsable-title">
+          <h2 id="responsable-title">Responsable y domicilio</h2>
+          <p>
+            De conformidad con lo establecido en la Ley Federal de
+            Protección de Datos Personales en Posesión de los Particulares
+            (LFPDPPP), <strong>Grupo Vazra Consultores S.C.</strong>
+            pone a su disposición el siguiente aviso de privacidad.
+          </p>
+          <p>
+            <strong>Grupo Vazra Consultores S.C.</strong> es responsable
+            del uso y protección de sus datos personales, en este sentido
+            y atendiendo las obligaciones legales establecidas en la Ley
+            Federal de Protección de Datos Personales en Posesión de los
+            Particulares, a través de este instrumento se informa a los
+            titulares de los datos, la información que de ellos se recaba
+            y los fines que se le darán a dicha información.
+          </p>
+          <p>
+            Además de lo anterior, informamos a usted que
+            <strong>Grupo Vazra Consultores S.C.</strong>
+            tiene su domicilio ubicado en:
+            <strong>
+              Av. Plan de Ayala 1759 Local B-20 Col. Jacarandas en
+              Cuernavaca, Morelos C.P. 62420
+            </strong>.
+          </p>
+        </section>
+
+        <section class="legal-section" id="finalidades" aria-labelledby="finalidades-title">
+          <h2 id="finalidades-title">Finalidad de los datos recabados</h2>
+          <p>
+            Los datos personales que recabamos de usted serán utilizados
+            para las siguientes finalidades, las cuales son necesarias
+            para concretar nuestra relación con usted así como atender
+            los servicios y/o pedidos que solicite:
+          </p>
+          <ul>
+            <li><strong>Proveer los servicios y productos que ha solicitado a Grupo Vazra Consultores.</strong></li>
+            <li><strong>Realizar campañas de mercadotecnia en medios digitales.</strong></li>
+          </ul>
+        </section>
+
+        <section class="legal-section" id="datos-personales" aria-labelledby="datos-title">
+          <h2 id="datos-title">Datos personales y cookies</h2>
+          <p>
+            Para llevar a cabo las finalidades descritas en el presente
+            aviso de privacidad, utilizaremos los siguientes datos
+            personales:
+          </p>
+          <ul>
+            <li><strong>Nombre</strong></li>
+            <li><strong>Correo electrónico</strong></li>
+            <li><strong>Teléfono</strong></li>
+          </ul>
+          <p>
+            Así mismo, <strong>Grupo Vazra Consultores</strong>
+            hace de su conocimiento que este sitio web utiliza cookies
+            para mejorar tu experiencia de usuario en nuestra web.
+          </p>
+        </section>
+
+        <section class="legal-section" id="datos-sensibles" aria-labelledby="sensibles-title">
+          <h2 id="sensibles-title">Datos personales sensibles</h2>
+          <p>
+            Además de estos datos personales, se hará uso de los
+            siguientes datos que conforme a ley son considerados como
+            datos personales sensibles, por lo cual requieren de su
+            autorización expresa y por escrito para poder hacer uso de
+            ellos. En este sentido, nos comprometemos con usted a no
+            realizar ningún tipo de uso o tratamiento de sus datos
+            personales sensibles, en tanto no se recabe la autorización
+            firmada por escrito o a través de un sistema de firma
+            electrónica, en el que usted nos otorgue expresamente el
+            consentimiento para tratar sus siguientes datos personales
+            sensibles:
+          </p>
+          <ul>
+            <li><strong>Padecimiento de enfermedades congénitas y/o degenerativas</strong></li>
+            <li><strong>Operaciones quirúrgicas realizadas o pendientes por realizar</strong></li>
+            <li><strong>Estatus de persona políticamente expuesta</strong></li>
+          </ul>
+        </section>
+
+        <section class="legal-section" id="transferencias" aria-labelledby="transferencias-title">
+          <h2 id="transferencias-title">Transferencia de datos</h2>
+          <p>
+            Por otra parte, informamos a usted, que sus datos personales
+            serán compartidos con las siguientes autoridades, empresas,
+            organizaciones o personas distintas a nosotros: compañía(s)
+            aseguradora(s) que emitan póliza a su favor una vez realizada
+            la contratación.
+          </p>
+          <p>
+            Su información será compartida exclusivamente para los fines
+            que a continuación se mencionan
+            <strong>para la celebración de contrato de seguro seleccionado por usted.</strong>
+          </p>
+          <p>
+            Al estar involucrados datos personales sensibles, se requiere
+            de su autorización expresa y por escrito para poder compartir
+            sus datos, en este sentido, nos comprometemos con usted a no
+            compartir sus datos personales sensibles, en tanto no se
+            recabe la autorización firmada por escrito o a través de un
+            sistema de firma electrónica, en el que usted nos otorgue
+            expresamente el consentimiento para compartir sus datos
+            personales sensibles exclusivamente con las autoridades,
+            empresas, organizaciones, o personas que se mencionan y para
+            los fines señalados.
+          </p>
+        </section>
+
+        <section class="legal-section" id="derechos-arco" aria-labelledby="arco-title">
+          <h2 id="arco-title">Derechos ARCO</h2>
+          <p>
+            Usted tiene en todo momento el derecho a conocer qué datos
+            personales tenemos de usted, para qué los utilizamos y las
+            condiciones del uso que les damos (Acceso). Asimismo, es su
+            derecho solicitar la corrección de su información personal
+            en caso de que esté desactualizada, sea inexacta o incompleta
+            (Rectificación); de igual manera, tiene derecho a que su
+            información se elimine de nuestros registros o bases de datos
+            cuando considere que la misma no está siendo utilizada
+            adecuadamente (Cancelación); así como también a oponerse al
+            uso de sus datos personales para fines específicos
+            (Oposición). Estos derechos se conocen como derechos ARCO.
+          </p>
+          <p>
+            Para el ejercicio de cualquiera de los derechos ARCO, se
+            deberá presentar la solicitud respectiva a través del
+            siguiente correo electrónico:
+            <a href="mailto:ventas@marketdeseguros.com">
+              <strong>ventas@marketdeseguros.com</strong>
+            </a>
+          </p>
+          <p>
+            Lo anterior también servirá para conocer el procedimiento
+            y requisitos para el ejercicio de los derechos ARCO, no
+            obstante, la solicitud de ejercicio de estos derechos debe
+            contener la siguiente información:
+          </p>
+          <ul>
+            <li><strong>Nombre</strong></li>
+            <li><strong>Teléfono</strong></li>
+            <li><strong>Domicilio</strong></li>
+            <li><strong>Motivo por el cual realiza la solicitud</strong></li>
+          </ul>
+          <p>
+            La respuesta a la solicitud se dará en máximo
+            <strong>10 días hábiles</strong>
+            y se comunicará a través del
+            <strong>mismo correo por el cual se realizó la solicitud</strong>.
+          </p>
+        </section>
+
+        <section class="legal-section" id="seguridad" aria-labelledby="seguridad-title">
+          <h2 id="seguridad-title">Medidas de seguridad</h2>
+          <p>
+            Para garantizar el correcto resguardo de sus datos personales
+            y para dar pleno cumplimiento a las obligaciones que la
+            LFPDPPP establece en la materia, se le informa que
+            <strong>Grupo Vazra Consultores S.C.</strong>
+            tiene implementadas las medidas de seguridad administrativas,
+            técnicas y físicas necesarias y suficientes para evitar su
+            daño, pérdida, alteración, destrucción, uso, acceso o
+            divulgación indebida.
+          </p>
+        </section>
+
+        <section class="legal-section" id="cambios" aria-labelledby="cambios-title">
+          <h2 id="cambios-title">Cambios al aviso de privacidad</h2>
+          <p>
+            Nos comprometemos a mantenerlo informado sobre los cambios
+            que pueda sufrir el presente aviso de privacidad, sin
+            embargo, usted puede solicitar información sobre si el mismo
+            ha sufrido algún cambio a través de la siguiente dirección
+            electrónica:
+            <a href="./avisoprivacidad.html">
+              www.marketdeseguros.com/aviso-de-privacidad
+            </a>
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand brand-white" href="./index.html" aria-label="Market de Seguros, inicio">
+            <img
+              src="./img/market-blanco.png"
+              alt="Market de Seguros"
+              style="width:150px; height:auto;"
+            >
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Tu protección</h2>
+          <a href="./personas.html">Personas y familias</a>
+          <a href="./empresa.html">Empresas y negocios</a>
+          <a href="./escuela.html">Comunidad escolar</a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Estamos cerca</h2>
+          <a href="./nosotros.html">Conoce Market</a>
+          <a href="./seguro-auto.html">Cotiza en línea ↗</a>
+          <a href="https://www.facebook.com/segurosyfianzasmultimarca" target="_blank" rel="noopener noreferrer">
+            Síguenos en Facebook ↗<span class="sr-only"> (abre otra pestaña)</span>
+          </a>
+        </div>
+
+        <div class="footer-column footer-address">
+          <h2>Visítanos en Morelos</h2>
+          <p>
+            Av. Plan de Ayala 1759, local B-20.<br>
+            Plaza Cascada, col. Jacarandas, 62420.<br>
+            Cuernavaca, Morelos.
+          </p>
+          <a href="tel:+527771193499">777 119 34 99</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Market de Seguros. Todos los derechos reservados.</p>
+        <a href="./avisoprivacidad.html">Aviso de privacidad</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

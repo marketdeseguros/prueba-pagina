@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c3361">
+  <title>Seguro de Vida Grupo | Market de Seguros</title>
+  <meta name="description" content="Cuida a quienes hacen posible cada logro de tu empresa con un seguro de Vida Grupo en Market de Seguros.">
+  <link rel="icon" type="image/png" href="./img/icon-market.png">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./subpaginas.css">
+  <script src="./subpaginas.js" defer></script>
+  <script src="./solicitudes.js" defer></script>
+  <script src="./menu-header.js" defer></script>
+</head>
+<body class="subpagina">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="container navigation">
+      <a class="brand" href="./index.html" aria-label="Market de Seguros, inicio">
+        <img src="./img/market-logo.png" alt="Market de Seguros" style="width:150px; max-width:28vw; height:auto;">
+      </a>
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="./personas.html">Personas</a>
+        <a href="./empresa.html" aria-current="page">Empresas</a>
+        <a href="./escuela.html">Escolar</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./recursos.html">Blog</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+      <a class="button button-navy header-quote" href="#detalle-producto">Cotizar en línea</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <span data-icon="menu" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" hidden>
+      <a href="./personas.html">Personas</a>
+      <a href="./empresa.html" aria-current="page">Empresas</a>
+      <a href="./escuela.html">Escolar</a>
+      <a href="./nosotros.html">Nosotros</a>
+      <a href="./recursos.html">Blog</a>
+      <a href="./contacto.html">Contacto</a>
+      <a href="https://wa.me/527771193499?text=Hola,%20deseo%20cotizar%20en%20línea">Cotizar en línea</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <nav class="container sp-ruta" aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./empresa.html">Empresas</a></li>
+        <li aria-current="page">Vida Grupo</li>
+      </ol>
+    </nav>
+
+    <div class="container">
+      <p class="sp-estado" id="formularios-estado" role="status" hidden>
+        No pudimos cargar el formulario. Actualiza la página o <a href="./contacto.html">contacta a nuestro equipo</a>.
+      </p>
+
+      <section class="sp-producto" id="detalle-producto" data-categoria="empresas" data-nombre="Vida Grupo" aria-labelledby="pagina-titulo">
+        <div class="sp-titulo">
+          <div class="product-icon">
+            <img src="./img/iconos/icono-persona.png" alt="">
+          </div>
+          <p class="eyebrow">VIDA GRUPO</p>
+          <h1 id="pagina-titulo" style="font-size: clamp(2rem, 3.2vw, 3rem); line-height: 1.15; letter-spacing: -1.2px; margin-top: 12px;">
+            Un respaldo para quienes trabajan contigo.
+          </h1>
+          <figure class="sp-foto">
+            <img src="https://images.unsplash.com/photo-1774600134168-b9ebd714e4e1?auto=format&fit=crop&w=900&q=82" alt="Colaboradores reunidos alrededor de sus computadoras en una oficina" width="900" height="675">
+          </figure>
+        </div>
+
+        <div class="sp-contenido">
+          <p class="sp-intro">
+            Tu equipo es parte de lo que has construido. Conoce opciones de protección de vida para tus colaboradores y el respaldo que pueden ofrecer a sus beneficiarios.
+          </p>
+
+          <h3>Una propuesta de acuerdo con tu equipo</h3>
+          <ul class="sp-lista">
+            <li><strong>Composición del grupo:</strong> número de colaboradores, edades y ocupaciones.</li>
+            <li><strong>Protección deseada:</strong> suma asegurada y coberturas disponibles para el grupo.</li>
+            <li><strong>Incorporación:</strong> requisitos de ingreso, límites de edad y condiciones de aceptación.</li>
+            <li><strong>Seguimiento:</strong> procedimiento para actualizar integrantes y beneficiarios.</li>
+          </ul>
+
+          <div class="sp-datos">
+            <strong>Empieza por las características del grupo</strong>
+            Cuéntanos cuántas personas deseas asegurar y qué actividades realizan. Te indicaremos qué información se requiere para continuar.
+          </div>
+
+          <details class="sp-pregunta">
+            <summary>¿Qué sucede cuando entra o sale un colaborador?</summary>
+            <p>Los movimientos deben realizarse conforme al procedimiento y los plazos establecidos en la póliza. Es importante revisar la fecha en que comienza o termina la protección de cada persona.</p>
+          </details>
+
+          <div class="sp-accion">
+            <button class="button button-navy" type="button" data-producto="Vida Grupo" data-solicitud disabled aria-haspopup="dialog" aria-controls="product-dialog">
+              Solicitar cotización de Vida Grupo
+              <span data-icon="arrow-right" aria-hidden="true"></span>
+            </button>
+            <a class="button button-white" href="./empresa.html">Ver otros seguros empresariales</a>
+          </div>
+        </div>
+      </section>
+
+      <p class="sp-condiciones">
+        La información es orientativa. Las coberturas, sumas aseguradas, deducibles, exclusiones y requisitos dependen del producto y de la aseguradora. Enviar una solicitud no implica aceptación del riesgo ni inicio de cobertura.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand brand-white" href="./index.html" aria-label="Market de Seguros, inicio">
+            <img src="./img/market-blanco.png" alt="Market de Seguros" style="width:150px; height:auto;">
+          </a>
+        </div>
+        <div class="footer-column">
+          <h2>Tu protección</h2>
+          <a href="./personas.html">Personas y familias</a>
+          <a href="./empresa.html">Empresas y negocios</a>
+          <a href="./escuela.html">Comunidad escolar</a>
+        </div>
+        <div class="footer-column">
+          <h2>Estamos cerca</h2>
+          <a href="./nosotros.html">Conoce Market</a>
+          <a href="./seguro-auto.html">Cotiza en línea ↗</a>
+          <a href="https://www.facebook.com/segurosyfianzasmultimarca" target="_blank" rel="noopener noreferrer">Síguenos en Facebook ↗</a>
+        </div>
+        <div class="footer-column footer-address">
+          <h2>Visítanos en Morelos</h2>
+          <p>Av. Plan de Ayala 1759, local B-20.<br>Plaza Cascada, col. Jacarandas, 62420.<br>Cuernavaca, Morelos.</p>
+          <a href="tel:+527771193499">777 119 34 99</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Market de Seguros. Todos los derechos reservados.</p>
+        <a href="./avisoprivacidad.html">Aviso de privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="product-dialog" class="product-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <button id="close-dialog" class="dialog-close" type="button" aria-label="Cerrar formulario">
+      <span data-icon="x" aria-hidden="true"></span>
+    </button>
+    <div id="dialog-icon" class="product-icon"></div>
+    <p class="eyebrow">SOLICITUD DE COTIZACIÓN</p>
+    <h2 id="dialog-title"></h2>
+    <p id="dialog-description"></p>
+    <a id="dialog-email" class="button button-navy" hidden>Solicitar cotización</a>
+  </dialog>
+</body>
+</html>

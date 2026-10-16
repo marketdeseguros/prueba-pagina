@@ -1,0 +1,1775 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c3361">
+
+  <title>Seguros para personas y familias | Market de Seguros</title>
+
+  <meta
+    name="description"
+    content="Conoce opciones de seguros para tu auto, viajes, salud, familia, hogar y mascotas. Solicita una cotización con Market de Seguros."
+  >
+
+  <meta
+    property="og:title"
+    content="Seguros para personas y familias | Market de Seguros"
+  >
+
+  <meta
+    property="og:description"
+    content="Protege a tu familia en cualquier etapa de su vida."
+  >
+
+  <meta property="og:type" content="website">
+
+  <!-- ICONO DE LA PESTAÑA -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="./img/icon-market.png"
+  >
+
+  <!-- ESTILOS GENERALES DEL SITIO -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- FORMULARIOS Y MENÚ EXISTENTES -->
+  <script src="./solicitudes.js" defer></script>
+  <script src="./menu-header.js" defer></script>
+
+  <!-- ESTILOS EXCLUSIVOS DE PERSONAS -->
+  <style>
+    .pagina-personas [hidden] {
+      display: none !important;
+    }
+
+    .pagina-personas .desktop-nav a[aria-current="page"]::after {
+      right: 0;
+    }
+
+    .pagina-personas .mobile-nav a[aria-current="page"] {
+      color: var(--cyan-text);
+    }
+
+    .pagina-personas .icon-mask {
+      display: inline-block;
+      background: currentColor;
+
+      -webkit-mask:
+        var(--icon-file) center / contain no-repeat;
+
+      mask:
+        var(--icon-file) center / contain no-repeat;
+    }
+
+    .pagina-personas .button .icon,
+    .pagina-personas .text-link .icon {
+      color: inherit;
+    }
+
+    .pagina-personas [data-solicitud]:disabled {
+      opacity: .55;
+      cursor: wait;
+    }
+
+    .p-ruta {
+      padding-top: 25px;
+      font-size: .875rem;
+      color: var(--muted);
+    }
+
+    .p-ruta ol {
+      display: flex;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .p-ruta li + li::before {
+      content: "/";
+      margin-right: 12px;
+    }
+
+    .p-ruta a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .p-portada {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 54px;
+      align-items: center;
+      padding-block: 42px 58px;
+    }
+
+    .p-portada h1 {
+      margin-top: 18px;
+      font-size: clamp(2.6rem, 4.5vw, 4.1rem);
+      line-height: 1.08;
+      letter-spacing: -2px;
+    }
+
+    .p-portada h1 span {
+      display: block;
+      color: var(--cyan-text);
+    }
+
+    .p-portada-texto {
+      margin-top: 24px;
+      max-width: 520px;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .p-portada .button {
+      margin-top: 26px;
+    }
+
+    .p-portada-imagen {
+      margin: 0;
+    }
+
+    .p-portada-imagen img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 90px 20px 20px 20px;
+      background: var(--ice);
+    }
+
+    .p-indice {
+      padding-block: 25px;
+      background: #f4f8fb;
+      border-block: 1px solid var(--line);
+    }
+
+    .p-indice .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 25px;
+    }
+
+    .p-indice a {
+      padding-block: 8px;
+      font-weight: 600;
+      font-size: .9375rem;
+    }
+
+    .p-indice a:hover {
+      color: var(--cyan-text);
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    .p-producto {
+      display: grid;
+      grid-template-columns:
+        minmax(0, .85fr) minmax(0, 1.3fr);
+
+      gap: 65px;
+      padding-block: 62px;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 110px;
+    }
+
+    .p-producto > * {
+      min-width: 0;
+    }
+
+    .p-titulo .product-icon {
+      margin-bottom: 22px;
+    }
+
+    .p-titulo .product-icon img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    .p-titulo h2 {
+      margin-top: 14px;
+      font-size: clamp(1.9rem, 2.8vw, 2.65rem);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .p-intro {
+      color: var(--text);
+      font-size: 1.0625rem;
+      line-height: 1.8;
+    }
+
+    .p-contenido h3 {
+      margin: 24px 0 12px;
+      font-size: 1.0625rem;
+      line-height: 1.4;
+    }
+
+    .p-lista {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .p-lista li {
+      margin-bottom: 10px;
+      padding-left: 3px;
+      line-height: 1.7;
+    }
+
+    .p-lista li::marker {
+      color: var(--cyan-text);
+    }
+
+    .p-lista strong {
+      color: var(--navy);
+    }
+
+    .p-datos {
+      margin-top: 22px;
+      padding: 18px 20px;
+      background: #f4f8fb;
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 9px 9px 0;
+      font-size: .9375rem;
+      line-height: 1.7;
+    }
+
+    .p-datos strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .p-accion {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .p-accion .button {
+      max-width: 100%;
+      white-space: normal;
+    }
+
+    .p-pregunta {
+      margin-top: 23px;
+      border-top: 1px solid var(--line);
+    }
+
+    .p-pregunta summary {
+      padding: 17px 0;
+      cursor: pointer;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .p-pregunta p {
+      padding-bottom: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .p-planes {
+      margin-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .p-plan {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .p-plan summary {
+      padding: 19px 0;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    .p-plan p {
+      margin: 0 0 14px;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+
+    .p-plan .text-link {
+      background: none;
+      border: 0;
+      padding: 4px 0 18px;
+      text-align: left;
+    }
+
+    .p-plan summary:focus-visible,
+    .p-pregunta summary:focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 4px;
+    }
+
+    .p-condiciones {
+      padding-block: 24px 40px;
+      color: var(--muted);
+      font-size: .8125rem;
+      line-height: 1.7;
+    }
+
+    .p-cierre {
+      padding-block: 48px;
+      background: var(--ice);
+    }
+
+    .p-cierre .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .p-cierre h2 {
+      font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+      max-width: 660px;
+    }
+
+    .p-cierre p {
+      margin-top: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 620px;
+    }
+
+    .p-estado {
+      padding: 18px;
+      margin-top: 25px;
+      background: #fff2f0;
+      border: 1px solid #efd5d0;
+      border-radius: 9px;
+    }
+
+    .p-estado a {
+      text-decoration: underline;
+    }
+
+    .pagina-personas #dialog-icon img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 1000px) {
+      .p-portada {
+        gap: 32px;
+      }
+
+      .p-portada-imagen img {
+        height: 390px;
+      }
+
+      .p-producto {
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .p-portada {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-block: 28px 36px;
+      }
+
+      .p-portada h1 {
+        letter-spacing: -1.4px;
+      }
+
+      .p-portada-imagen img {
+        height: 340px;
+        border-top-left-radius: 65px;
+      }
+
+      .p-producto {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-block: 38px;
+        scroll-margin-top: 88px;
+      }
+
+      .p-titulo .product-icon {
+        margin-bottom: 16px;
+      }
+
+      .p-indice .container {
+        gap: 4px 20px;
+      }
+
+      .p-indice a {
+        font-size: .875rem;
+      }
+
+      .p-cierre .container {
+        display: block;
+      }
+
+      .p-cierre .button {
+        margin-top: 22px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .p-portada-imagen img {
+        height: 280px;
+      }
+
+      .p-accion .button {
+        width: 100%;
+      }
+
+      .p-datos {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body class="pagina-personas">
+  <a class="skip-link" href="#contenido">
+    Saltar al contenido
+  </a>
+  <header class="header">
+    <div class="container navigation">
+      <a
+        class="brand"
+        href="./index.html"
+        aria-label="Market de Seguros, inicio"
+      >
+        <img
+          src="./img/market-logo.png"
+          alt="Market de Seguros"
+          style="width:150px; max-width:28vw; height:auto;"
+        >
+      </a>
+
+      <nav
+        class="desktop-nav"
+        aria-label="Navegación principal"
+      >
+        <a href="./personas.html" aria-current="page">
+          Personas
+        </a>
+        <a href="./empresa.html">Empresas</a>
+        <a href="./escuela.html">Escolar</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./recursos.html">Blog</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+
+      <a
+        class="button button-navy header-quote"
+        href="https://wa.me/527771193499?text=Hola,%20deseo%20cotizar%20en%20línea"
+      >
+        Cotizar en línea
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <span data-icon="menu" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav
+      class="mobile-nav"
+      id="mobile-nav"
+      aria-label="Navegación móvil"
+      hidden
+    >
+      <a href="./personas.html" aria-current="page">
+        Personas
+      </a>
+      <a href="./empresa.html">Empresas</a>
+      <a href="./escuela.html">Escolar</a>
+      <a href="./nosotros.html">Nosotros</a>
+      <a href="./recursos.html">Blog</a>
+      <a href="./contacto.html">Contacto</a>
+      <a href="https://wa.me/527771193499?text=Hola,%20deseo%20cotizar%20en%20línea">Cotizar en línea</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <nav class="container p-ruta" aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="./index.html">Inicio</a></li>
+        <li aria-current="page">Personas</li>
+      </ol>
+    </nav>
+    <section
+      class="container p-portada"
+      aria-labelledby="personas-titulo"
+    >
+      <div>
+        <p class="eyebrow">
+          SEGUROS PARA PERSONAS Y FAMILIAS
+        </p>
+
+        <h1 id="personas-titulo">
+          Tu vida cambia.
+          <span>Tu protección también.</span>
+        </h1>
+
+        <p class="p-portada-texto">
+          Crecer implica nuevos planes, más responsabilidades y personas que quieres cuidar. En Market de Seguros te acompañamos en cada en cada etapa de su vida.
+        </p>
+
+        <a
+          class="button button-navy"
+          href="#seguros-personas"
+        >
+          Explorar seguros
+          <span data-icon="arrow-right" aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <figure class="p-portada-imagen">
+        <img
+          src="./img/familia.svg"
+          alt="Familia reunida"
+          width="560"
+          height="560"
+          fetchpriority="high"
+        >
+      </figure>
+    </section>
+    <nav
+      class="p-indice"
+      id="seguros-personas"
+      aria-label="Seguros para personas"
+    >
+      <div class="container">
+        <a href="#seguro-auto">Auto</a>
+        <a href="#seguro-viaje.html">Viajes</a>
+        <a href="#seguro-medicos">Gastos médicos</a>
+        <a href="#seguro-vida">Vida y familia</a>
+        <a href="#seguro-hogar">Hogar</a>
+        <a href="#seguro-accidentes">Accidentes personales</a>
+        <a href="#seguro-mascotas">Mascotas</a>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <p
+        class="p-estado"
+        id="personas-estado"
+        role="status"
+        hidden
+      >
+        No pudimos cargar los formularios. Actualiza la página o
+        <a href="./index.html#contacto">
+          contacta a nuestro equipo
+        </a>.
+      </p>
+
+      <noscript>
+        <p class="p-datos">
+          Activa JavaScript para abrir los formularios.
+          También puedes
+          <a href="mailto:ventas@marketdeseguros.com">
+            escribirnos
+          </a>.
+        </p>
+      </noscript>
+      <section
+        class="p-producto"
+        id="seguro-auto"
+        data-nombre="Auto"
+        aria-labelledby="auto-titulo"
+      >
+        <div class="p-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/icono-auto.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">SEGURO DE AUTO</p>
+
+          <h2 id="auto-titulo">
+            Tu auto te acompaña. Dale protección para el camino.
+          </h2>
+        </div>
+
+        <div class="p-contenido">
+          <p class="p-intro">
+            Lo usas para trabajar, mover a tu familia o irte de viaje. Piénsalo bien: ¿qué pasaría si hoy chocas o te lo roban? Nosotros te ayudamos a revisar qué te cubre cada opción ante un imprevisto.
+          </p>
+
+          <h3>¿Qué cambia entre un plan y otro?</h3>
+
+          <ul class="p-lista">
+            <li>
+              <strong>Responsabilidad civil:</strong>
+              Cubre exclusivamente si dañas los bienes o la salud de otras personas que hayan resultado lesionadas en un accidente. 
+            </li>
+            <li>
+              <strong>Limitada:</strong>
+              Te protege ante el robo total del carro, así como la responsabilidad civil, gastos médicos, accidentes al conductor y asistencia vial.
+            </li>
+            <li>
+              <strong>Amplia:</strong>
+              Es la cobertura más completa. Además de las coberturas que se incluyen en el plan limitado, cubre los daños materiales que sufra tu vehículo.
+            </li>
+          </ul>
+
+          <div class="p-datos">
+            <strong>No te inclines por el precio más bajo</strong>
+            Revisa la suma asegurada, los deducibles, las
+            asistencias y el uso declarado del vehículo.
+          </div>
+
+          <details class="p-pregunta">
+            <summary>
+              ¿Todos los seguros de auto cubren lo mismo?
+            </summary>
+            <p>
+              No. Cada propuesta tiene coberturas, límites y
+              condiciones propias. El cotizador te permite consultar
+              las opciones disponibles para tu vehículo.
+            </p>
+          </details>
+
+          <div class="p-accion">
+            <a
+              class="button button-navy"
+              href="./seguro-auto.html"
+            >
+              Cotizar mi auto
+              <span
+                data-icon="arrow-up-right"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section
+        class="p-producto"
+        id="seguro-viaje.html"
+        data-nombre="Viajes"
+        aria-labelledby="viajes-titulo"
+      >
+        <div class="p-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono-viaje.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">VIAJES</p>
+
+          <h2 id="viajes-titulo">
+            Prepara tu viaje con algo más que una maleta.
+          </h2>
+        </div>
+
+        <div class="p-contenido">
+          <p class="p-intro">
+            Cada viaje tiene un destino, una duración y necesidades
+            distintas. Compártenos tus planes para revisar opciones
+            de protección y asistencia durante tu estancia.
+          </p>
+
+          <h3>Revisamos contigo</h3>
+
+          <ul class="p-lista">
+            <li>
+              Los destinos y la duración completa del viaje.
+            </li>
+            <li>
+              Las personas que viajarán y sus edades.
+            </li>
+            <li>
+              El alcance territorial y la forma de solicitar asistencia.
+            </li>
+            <li>
+              Los servicios, límites y exclusiones de cada plan.
+            </li>
+          </ul>
+
+          <div class="p-datos">
+            <strong>Para preparar tu cotización</strong>
+            Necesitamos destino, fecha de salida, fecha de regreso,
+            número de viajeros y edad de cada persona.
+          </div>
+
+          <details class="p-pregunta">
+            <summary>
+              ¿Puedo solicitar una propuesta para varias personas?
+            </summary>
+            <p>
+              Sí. Al indicar el número de viajeros, el formulario
+              mostrará un campo obligatorio para la edad de cada uno.
+            </p>
+          </details>
+
+          <div class="p-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Viajes"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Solicitar cotización de viaje
+              <span
+                data-icon="arrow-right"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="p-producto"
+        id="seguro-medicos"
+        data-nombre="Gastos médicos"
+        aria-labelledby="medicos-titulo"
+      >
+        <div class="p-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono-gmm.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">GASTOS MÉDICOS</p>
+
+          <h2 id="medicos-titulo">
+            Decidir sobre tu salud también implica cuidar tu economía.
+          </h2>
+        </div>
+
+        <div class="p-contenido">
+          <p class="p-intro">
+            Una enfermedad o un accidente puede traer gastos que
+            no tenías previstos. Conoce opciones individuales y
+            familiares y revisa sus condiciones antes de elegir.
+          </p>
+
+          <h3>Conceptos que conviene conocer</h3>
+
+          <ul class="p-lista">
+            <li>
+              <strong>Deducible:</strong>
+              cantidad que queda a tu cargo conforme a la póliza.
+            </li>
+            <li>
+              <strong>Coaseguro:</strong>
+              porcentaje del gasto cubierto que pagas después del
+              deducible, según las condiciones del plan.
+            </li>
+            <li>
+              <strong>Red y tabulador:</strong>
+              hospitales disponibles y límites para honorarios médicos.
+            </li>
+            <li>
+              <strong>Periodos de espera y exclusiones:</strong>
+              cuándo puede utilizarse una cobertura y qué situaciones
+              quedan fuera.
+            </li>
+          </ul>
+
+          <div class="p-datos">
+            <strong>Individual o familiar</strong>
+            Indica cuántas personas deseas asegurar. El formulario
+            solicitará fecha de nacimiento, género y, cuando
+            corresponda, parentesco de cada integrante.
+          </div>
+
+          <details class="p-pregunta">
+            <summary>¿Puedo incluir a mi familia?</summary>
+            <p>
+              Puedes solicitar una propuesta familiar. Cada persona
+              deberá cumplir los requisitos de aceptación del
+              producto; revisaremos los datos de todos los integrantes.
+            </p>
+          </details>
+
+          <div class="p-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Gastos médicos"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Solicitar cotización de gastos médicos
+              <span
+                data-icon="arrow-right"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIDA Y FAMILIA -->
+      <section
+        class="p-producto"
+        id="seguro-vida"
+        data-nombre="Vida y familia"
+        aria-labelledby="vida-titulo"
+      >
+        <div class="p-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono-familia.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">VIDA Y FAMILIA</p>
+
+          <h2 id="vida-titulo">
+            Cuidar de los tuyos también es hacer planes.
+          </h2>
+        </div>
+
+        <div class="p-contenido">
+          <p class="p-intro">
+            La protección de tu familia, la educación y el retiro
+            son objetivos distintos. Te ayudamos a identificar qué
+            quieres atender y a revisar las alternativas disponibles
+            para esa etapa de tu vida.
+          </p>
+
+          <div class="p-planes">
+
+            <!-- RETIRO -->
+            <details class="p-plan" open>
+              <summary>Retiro</summary>
+
+              <p>
+                Dale un lugar al retiro dentro de tus planes de hoy.
+                Revisamos tu objetivo, la edad a la que deseas
+                retirarte y cuánto puedes aportar de forma constante.
+              </p>
+
+              <p>
+                Conviene conocer el plazo, los costos y las condiciones
+                para modificar las aportaciones o disponer de los recursos.
+              </p>
+
+              <button
+                class="text-link"
+                type="button"
+                data-producto="Vida y familia"
+                data-plan="Retiro"
+                data-solicitud
+                disabled
+                aria-haspopup="dialog"
+                aria-controls="product-dialog"
+              >
+                Solicitar propuesta de retiro
+                <span
+                  data-icon="arrow-right"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </details>
+
+            <!-- EDUCATIVO -->
+            <details class="p-plan">
+              <summary>Educativo</summary>
+
+              <p>
+                Acompaña sus próximos pasos con un plan para su
+                educación. La edad del menor y el momento en que
+                necesitarás los recursos ayudan a definir la meta
+                y el plazo.
+              </p>
+
+              <p>
+                Revisamos las aportaciones y la protección que
+                contempla el contrato para el padre o la madre
+                asegurados.
+              </p>
+
+              <button
+                class="text-link"
+                type="button"
+                data-producto="Vida y familia"
+                data-plan="Educativo"
+                data-solicitud
+                disabled
+                aria-haspopup="dialog"
+                aria-controls="product-dialog"
+              >
+                Solicitar propuesta educativa
+                <span
+                  data-icon="arrow-right"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </details>
+
+            <!-- VIDA PREMIA -->
+            <details class="p-plan">
+              <summary>Vida Premia</summary>
+
+              <p>
+                Conoce esta alternativa y revisa si responde a lo
+                que buscas. Te explicamos sus beneficios, vigencia,
+                forma de pago y condiciones a partir de la propuesta
+                del producto.
+              </p>
+
+              <button
+                class="text-link"
+                type="button"
+                data-producto="Vida y familia"
+                data-plan="Vida Premia"
+                data-solicitud
+                disabled
+                aria-haspopup="dialog"
+                aria-controls="product-dialog"
+              >
+                Solicitar propuesta de Vida Premia
+                <span
+                  data-icon="arrow-right"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </details>
+
+            <!-- SERVICIOS FUNERARIOS -->
+            <details class="p-plan">
+              <summary>Servicios Funerarios</summary>
+
+              <p>
+                Organiza con anticipación decisiones que pueden
+                ser difíciles para tu familia. Revisamos los
+                servicios incluidos y las personas que deseas
+                contemplar.
+              </p>
+
+              <p>
+                Es importante conocer las localidades de atención,
+                los requisitos y el procedimiento para solicitar
+                el servicio.
+              </p>
+
+              <button
+                class="text-link"
+                type="button"
+                data-producto="Vida y familia"
+                data-plan="Servicios Funerarios"
+                data-solicitud
+                disabled
+                aria-haspopup="dialog"
+                aria-controls="product-dialog"
+              >
+                Consultar servicios funerarios
+                <span
+                  data-icon="arrow-right"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </details>
+
+            <!-- PPR -->
+            <details class="p-plan">
+              <summary>PPR · Plan Personal de Retiro</summary>
+
+              <p>
+                Empieza por definir cómo quieres preparar tu retiro.
+                Revisamos el horizonte de ahorro, las aportaciones
+                que puedes sostener y las condiciones del plan.
+              </p>
+
+              <p>
+                Antes de decidir, conviene entender los costos,
+                los requisitos de permanencia y las consecuencias
+                de retirar recursos anticipadamente.
+              </p>
+
+              <button
+                class="text-link"
+                type="button"
+                data-producto="Vida y familia"
+                data-plan="PPR"
+                data-solicitud
+                disabled
+                aria-haspopup="dialog"
+                aria-controls="product-dialog"
+              >
+                Solicitar propuesta de PPR
+                <span
+                  data-icon="arrow-right"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </details>
+
+            <!-- VIDA TEMPORAL -->
+            <details class="p-plan">
+              <summary>Vida Temporal</summary>
+
+              <p>
+                Explora protección para una etapa definida de tu
+                vida, como los años en que tu familia depende
+                de tus ingresos.
+              </p>
+
+              <p>
+                Revisamos la suma asegurada, los beneficiarios,
+                la vigencia y qué sucede al terminar el periodo
+                contratado.
+              </p>
+
+              <button
+                class="text-link"
+                type="button"
+                data-producto="Vida y familia"
+                data-plan="Vida Temporal"
+                data-solicitud
+                disabled
+                aria-haspopup="dialog"
+                aria-controls="product-dialog"
+              >
+                Solicitar propuesta de vida temporal
+                <span
+                  data-icon="arrow-right"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </details>
+
+            <!-- VIDA PAGOS LIMITADOS -->
+            <details class="p-plan">
+              <summary>Vida Pagos Limitados</summary>
+
+              <p>
+                Conoce opciones con un periodo de pago definido.
+                El tiempo durante el que pagas y la duración de
+                la protección pueden ser diferentes.
+              </p>
+
+              <p>
+                Te ayudamos a revisar ambos plazos y los beneficios
+                establecidos en el contrato.
+              </p>
+
+              <button
+                class="text-link"
+                type="button"
+                data-producto="Vida y familia"
+                data-plan="Vida Pagos Limitados"
+                data-solicitud
+                disabled
+                aria-haspopup="dialog"
+                aria-controls="product-dialog"
+              >
+                Consultar vida con pagos limitados
+                <span
+                  data-icon="arrow-right"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </details>
+          </div>
+
+          <div class="p-datos">
+            <strong>Una propuesta que puedas sostener</strong>
+            Según la opción elegida, te pediremos edad, objetivo,
+            capacidad de aportación y los datos necesarios para
+            preparar la cotización.
+          </div>
+
+          <details class="p-pregunta">
+            <summary>
+              ¿Por dónde empiezo si todavía no sé qué elegir?
+            </summary>
+            <p>
+              Identifica tu objetivo principal: proteger a quienes
+              dependen de ti, preparar una meta educativa o planear
+              el retiro. Podemos orientarte para revisar las opciones
+              relacionadas con ese objetivo.
+            </p>
+          </details>
+
+          <div class="p-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Vida y familia"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Solicitar una propuesta
+              <span
+                data-icon="arrow-right"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOGAR -->
+      <section
+        class="p-producto"
+        id="seguro-hogar"
+        data-nombre="Hogar"
+        aria-labelledby="hogar-titulo"
+      >
+        <div class="p-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono-hogar.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">SEGURO DE HOGAR</p>
+
+          <h2 id="hogar-titulo">
+            Tu casa guarda mucho de tu historia.
+          </h2>
+        </div>
+
+        <div class="p-contenido">
+          <p class="p-intro">
+            Tu vivienda y lo que tienes dentro representan tiempo
+            y esfuerzo. Conoce opciones para proteger tu patrimonio
+            y revisa qué considera cada plan según el inmueble
+            y el uso que le das.
+          </p>
+
+          <h3>¿Qué conviene distinguir?</h3>
+
+          <ul class="p-lista">
+            <li>
+              <strong>Construcción:</strong>
+              la estructura y los elementos del inmueble
+              contemplados en la póliza.
+            </li>
+            <li>
+              <strong>Contenidos:</strong>
+              muebles y otros bienes que se busca asegurar.
+            </li>
+            <li>
+              <strong>Riesgos específicos:</strong>
+              revisamos expresamente si el plan incluye protección
+              ante incendio, robo, sismo o inundación.
+            </li>
+          </ul>
+
+          <div class="p-datos">
+            <strong>Para preparar tu cotización</strong>
+            Comparte el tipo de vivienda, su uso, materiales de
+            construcción, código postal y medidas de seguridad.
+          </div>
+
+          <details class="p-pregunta">
+            <summary>
+              ¿La propuesta depende del tipo de vivienda?
+            </summary>
+            <p>
+              Sí. La ubicación, las características, el valor y
+              el uso del inmueble ayudan a determinar las opciones
+              disponibles y sus condiciones.
+            </p>
+          </details>
+
+          <div class="p-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Hogar"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Solicitar cotización de hogar
+              <span
+                data-icon="arrow-right"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACCIDENTES PERSONALES -->
+      <section
+        class="p-producto"
+        id="seguro-accidentes"
+        data-nombre="Accidentes personales"
+        aria-labelledby="accidentes-titulo"
+      >
+        <div class="p-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono-escudo.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">ACCIDENTES PERSONALES</p>
+
+          <h2 id="accidentes-titulo">
+            Un respaldo para los imprevistos de cada día.
+          </h2>
+        </div>
+
+        <div class="p-contenido">
+          <p class="p-intro">
+            Tu ocupación y tus actividades forman parte de tu
+            día a día. Compártenos esa información para revisar
+            alternativas de protección ante accidentes y conocer
+            sus alcances.
+          </p>
+
+          <h3>Revisamos contigo</h3>
+
+          <ul class="p-lista">
+            <li>
+              Las personas y actividades que se busca proteger.
+            </li>
+            <li>
+              Los beneficios por accidente incluidos en la propuesta.
+            </li>
+            <li>
+              Las sumas aseguradas, condiciones y actividades excluidas.
+            </li>
+          </ul>
+
+          <div class="p-datos">
+            <strong>Su enfoque es el accidente</strong>
+            Este producto tiene un alcance distinto al de gastos
+            médicos. Te ayudamos a entender qué eventos contempla
+            cada opción.
+          </div>
+
+          <details class="p-pregunta">
+            <summary>¿Importa a qué me dedico?</summary>
+            <p>
+              Sí. La ocupación y las actividades que realizas son
+              datos necesarios para evaluar la solicitud. También
+              te pediremos fecha de nacimiento y género.
+            </p>
+          </details>
+
+          <div class="p-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Accidentes personales"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Cotizar accidentes personales
+              <span
+                data-icon="arrow-right"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- MASCOTAS -->
+      <section
+        class="p-producto"
+        id="seguro-mascotas"
+        data-nombre="Mascotas"
+        aria-labelledby="mascotas-titulo"
+      >
+        <div class="p-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono-mascota.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">SEGURO PARA MASCOTAS</p>
+
+          <h2 id="mascotas-titulo">
+            También son familia. También merecen cuidado.
+          </h2>
+        </div>
+
+        <div class="p-contenido">
+          <p class="p-intro">
+            Tu mascota comparte tu casa y tu rutina. Conoce las
+            opciones que podemos cotizar para ella y revisa los
+            beneficios y condiciones de cada plan.
+          </p>
+
+          <h3>Antes de elegir, conoce</h3>
+
+          <ul class="p-lista">
+            <li>
+              Las características y edades de ingreso admitidas.
+            </li>
+            <li>
+              Los servicios y gastos veterinarios que contempla
+              el producto.
+            </li>
+            <li>
+              La forma de atención, los límites y las exclusiones.
+            </li>
+          </ul>
+
+          <div class="p-datos">
+            <strong>
+              Podemos cotizar mascotas de hasta 7 años cumplidos.
+            </strong>
+            Comparte su nombre, raza y edad. La aceptación depende
+            de las condiciones del producto.
+          </div>
+
+          <details class="p-pregunta">
+            <summary>
+              ¿Puedo cotizar si mi mascota tiene 7 años?
+            </summary>
+            <p>
+              Sí, puedes solicitar una cotización para una mascota
+              de 7 años cumplidos. Revisaremos los demás requisitos
+              de aceptación del producto.
+            </p>
+          </details>
+
+          <div class="p-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Mascotas"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Solicitar cotización para mi mascota
+              <span
+                data-icon="arrow-right"
+                aria-hidden="true"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <p class="p-condiciones">
+        Las coberturas, límites, deducibles, exclusiones y requisitos
+        dependen del producto y de las condiciones de la póliza
+        contratada. Solicitar una cotización no activa la cobertura.
+      </p>
+    </div>
+
+    <!-- CIERRE -->
+    <section class="p-cierre" aria-labelledby="ayuda-titulo">
+      <div class="container">
+        <div>
+          <h2 id="ayuda-titulo">
+            ¿Tienes dudas sobre qué protección necesitas?
+          </h2>
+          <p>
+            Cuéntanos qué quieres cuidar. Te ayudamos a entender
+            las opciones y a preparar el siguiente paso.
+          </p>
+        </div>
+
+        <a
+          class="button button-navy"
+          href="./index.html#contacto"
+        >
+          Contactar a Market
+          <span data-icon="arrow-right" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: mismos estilos y contenido del index -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a
+            class="brand brand-white"
+            href="./index.html"
+            aria-label="Market de Seguros, inicio"
+          >
+            <!-- LOGO DEL FOOTER -->
+            <img
+              src="./img/market-blanco.png"
+              alt="Market de Seguros"
+              style="width:150px; height:auto;"
+            >
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Tu protección</h2>
+
+          <a href="./personas.html">
+            Personas y familias
+          </a>
+
+          <a href="./empresa.html">
+            Empresas y negocios
+          </a>
+
+          <a href="./escuela.html">
+            Comunidad escolar
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Estamos cerca</h2>
+
+          <a href="./nosotros.html">
+            Conoce Market
+          </a>
+
+          <a href="./seguro-auto.html">
+            Cotiza en línea ↗
+          </a>
+
+          <a
+            href="https://www.facebook.com/segurosyfianzasmultimarca"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Síguenos en Facebook ↗
+            <span class="sr-only"> (abre otra pestaña)</span>
+          </a>
+        </div>
+
+        <div class="footer-column footer-address">
+          <h2>Visítanos en Morelos</h2>
+
+          <p>
+            Av. Plan de Ayala 1759, local B-20.<br>
+            Plaza Cascada, col. Jacarandas, 62420.<br>
+            Cuernavaca, Morelos.
+          </p>
+
+          <a href="tel:+527771193499">
+            777 119 34 99
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © <span id="year">2026</span> Market de Seguros.
+          Todos los derechos reservados.
+        </p>
+
+        <a href="./avisoprivacidad.html">
+          Aviso de privacidad
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- VENTANA PARA LOS FORMULARIOS -->
+  <dialog
+    id="product-dialog"
+    class="product-dialog"
+    aria-labelledby="dialog-title"
+    aria-describedby="dialog-description"
+  >
+    <button
+      id="close-dialog"
+      class="dialog-close"
+      type="button"
+      aria-label="Cerrar formulario"
+    >
+      <span data-icon="x" aria-hidden="true"></span>
+    </button>
+
+    <div id="dialog-icon" class="product-icon"></div>
+
+    <p class="eyebrow">SOLICITUD DE COTIZACIÓN</p>
+
+    <h2 id="dialog-title"></h2>
+    <p id="dialog-description"></p>
+
+    <!-- solicitudes.js inserta el formulario antes de este enlace. -->
+    <a
+      id="dialog-email"
+      class="button button-navy"
+      href="./seguro-auto.html"
+      hidden
+    >
+      Cotizar mi auto
+    </a>
+  </dialog>
+
+  <script>
+    /*
+      ICONOS DE INTERFAZ.
+      Cambia aquí las rutas si tus archivos tienen otros nombres.
+    */
+    const iconosInterfaz = {
+      'arrow-right': './img/icon-flecha.svg',
+      'arrow-up-right': './img/icon-diagonal.svg',
+      'menu': './img/icon-sandwich.svg',
+      'x': './img/icon-close.svg'
+    };
+
+    function icon(nombre) {
+      const archivo = iconosInterfaz[nombre];
+
+      if (!archivo) return '';
+
+      const elemento = document.createElement('span');
+
+      elemento.className = 'icon icon-mask';
+      elemento.setAttribute('aria-hidden', 'true');
+
+      elemento.style.setProperty(
+        '--icon-file',
+        'url("' + archivo + '")'
+      );
+
+      return elemento.outerHTML;
+    }
+
+    /*
+      DATOS PARA solicitudes.js.
+      Se obtienen de las secciones de esta página.
+    */
+    const products = {
+      personas: [
+        ...document.querySelectorAll('.p-producto[data-nombre]')
+      ].map(seccion => ({
+        name: seccion.dataset.nombre,
+
+        detail: seccion
+          .querySelector('.p-intro')
+          .textContent,
+
+        image: seccion
+          .querySelector('.product-icon img')
+          .getAttribute('src')
+      }))
+    };
+
+    const dialog = document.getElementById('product-dialog');
+
+    let ultimoBoton = null;
+
+    /*
+      solicitudes.js amplía esta función
+      con los campos y validaciones existentes.
+    */
+    function openProduct(categoria, indice) {
+      const producto = products[categoria]?.[indice];
+
+      if (!producto) return;
+
+      ultimoBoton = document.activeElement;
+
+      document.getElementById('dialog-title').textContent =
+        producto.name;
+
+      document.getElementById('dialog-description').textContent =
+        producto.detail;
+
+      const imagen = document.createElement('img');
+
+      imagen.src = producto.image;
+      imagen.alt = '';
+
+      document
+        .getElementById('dialog-icon')
+        .replaceChildren(imagen);
+
+      if (!dialog.open) {
+        dialog.showModal();
+      }
+
+      document.body.classList.add('dialog-open');
+      dialog.scrollTop = 0;
+    }
+
+    /*
+      BOTONES DE COTIZACIÓN.
+      Cada botón abre su producto y, cuando corresponde,
+      selecciona el plan de Vida y familia.
+    */
+    document.querySelectorAll('[data-producto]').forEach(boton => {
+      boton.addEventListener('click', () => {
+        const indice = products.personas.findIndex(
+          producto => producto.name === boton.dataset.producto
+        );
+
+        if (indice < 0) return;
+
+        openProduct('personas', indice);
+
+        if (boton.dataset.plan) {
+          const selector =
+            document.getElementById('sol-vida-seguro');
+
+          if (selector) {
+            selector.value = boton.dataset.plan;
+
+            selector.dispatchEvent(
+              new Event('change', { bubbles: true })
+            );
+          }
+        }
+      });
+    });
+
+    /*
+      CIERRE DEL FORMULARIO.
+    */
+    document
+      .getElementById('close-dialog')
+      .addEventListener('click', () => dialog.close());
+
+    dialog.addEventListener('close', () => {
+      document.body.classList.remove('dialog-open');
+
+      ultimoBoton?.focus({
+        preventScroll: true
+      });
+    });
+
+    dialog.addEventListener('click', evento => {
+      if (evento.target !== dialog) return;
+
+      const borde = dialog.getBoundingClientRect();
+
+      const fuera =
+        evento.clientX < borde.left ||
+        evento.clientX > borde.right ||
+        evento.clientY < borde.top ||
+        evento.clientY > borde.bottom;
+
+      if (fuera) {
+        dialog.close();
+      }
+    });
+
+    /*
+      MENÚ PRINCIPAL EN CELULARES Y TABLETS.
+      menu-header.js controla los submenús.
+    */
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    function cambiarMenu(abierto) {
+      mobileNav.hidden = !abierto;
+
+      menuToggle.setAttribute(
+        'aria-expanded',
+        String(abierto)
+      );
+
+      menuToggle.setAttribute(
+        'aria-label',
+        abierto ? 'Cerrar menú' : 'Abrir menú'
+      );
+
+      menuToggle.innerHTML = icon(
+        abierto ? 'x' : 'menu'
+      );
+    }
+
+    menuToggle.addEventListener('click', () => {
+      cambiarMenu(mobileNav.hidden);
+    });
+
+    mobileNav.querySelectorAll('a').forEach(enlace => {
+      enlace.addEventListener('click', () => {
+        cambiarMenu(false);
+      });
+    });
+
+    document.addEventListener('keydown', evento => {
+      if (evento.key === 'Escape' && !mobileNav.hidden) {
+        cambiarMenu(false);
+        menuToggle.focus();
+      }
+    });
+
+    document.addEventListener('click', evento => {
+      if (
+        !mobileNav.hidden &&
+        !evento.target.closest('.header')
+      ) {
+        cambiarMenu(false);
+      }
+    });
+
+    matchMedia('(min-width: 921px)').addEventListener(
+      'change',
+      evento => {
+        if (evento.matches) {
+          cambiarMenu(false);
+        }
+      }
+    );
+
+    /*
+      INSERTAR ICONOS Y ACTUALIZAR EL AÑO.
+    */
+    document.querySelectorAll('[data-icon]').forEach(elemento => {
+      elemento.innerHTML = icon(elemento.dataset.icon);
+    });
+
+    document.getElementById('year').textContent =
+      String(new Date().getFullYear());
+
+    /*
+      HABILITAR LOS BOTONES CUANDO solicitudes.js ESTÉ LISTO.
+    */
+    document.addEventListener('DOMContentLoaded', () => {
+      const disponible = Boolean(
+        document.getElementById('solicitud-cotizacion')
+      );
+
+      document.querySelectorAll('[data-solicitud]').forEach(boton => {
+        boton.disabled = !disponible;
+      });
+
+      document.getElementById('personas-estado').hidden =
+        disponible;
+    }, { once: true });
+  </script>
+</body>
+</html>

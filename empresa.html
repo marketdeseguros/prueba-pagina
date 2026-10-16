@@ -1,0 +1,1581 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c3361">
+
+  <title>Seguros para empresas y negocios | Market de Seguros</title>
+
+  <meta
+    name="description"
+    content="Conoce seguros de flotillas, Vida Grupo, responsabilidad civil, Pymes, gastos médicos colectivos y transporte de mercancías con Market de Seguros."
+  >
+
+  <meta
+    property="og:title"
+    content="Seguros para empresas y negocios | Market de Seguros"
+  >
+
+  <meta
+    property="og:description"
+    content="Tu negocio crece con el trabajo de todos. Conoce opciones para proteger a tu equipo, tus bienes y tu operación."
+  >
+
+  <meta property="og:type" content="website">
+
+  <!-- ICONO DE LA PESTAÑA -->
+  <link rel="icon" type="image/png" href="./img/icon-market.png">
+
+  <!-- ESTILOS COMPARTIDOS -->
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+
+  <!-- FORMULARIOS Y MENÚ COMPARTIDOS -->
+  <script src="./solicitudes.js" defer></script>
+  <script src="./menu-header.js" defer></script>
+
+  <style>
+    .pagina-empresas [hidden] {
+      display: none !important;
+    }
+
+    .pagina-empresas .desktop-nav a[aria-current="page"]::after {
+      right: 0;
+    }
+
+    .pagina-empresas .mobile-nav a[aria-current="page"] {
+      color: var(--cyan-text);
+    }
+
+    .pagina-empresas .icon-mask {
+      display: inline-block;
+      background: currentColor;
+      -webkit-mask: var(--icon-file) center / contain no-repeat;
+      mask: var(--icon-file) center / contain no-repeat;
+    }
+
+    .pagina-empresas .button .icon,
+    .pagina-empresas .text-link .icon {
+      color: inherit;
+    }
+
+    .pagina-empresas [data-solicitud]:disabled {
+      opacity: .55;
+      cursor: wait;
+    }
+
+    .e-ruta {
+      padding-top: 25px;
+      font-size: .875rem;
+      color: var(--muted);
+    }
+
+    .e-ruta ol {
+      display: flex;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .e-ruta li + li::before {
+      content: "/";
+      margin-right: 12px;
+    }
+
+    .e-ruta a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .e-portada {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 54px;
+      align-items: center;
+      padding-block: 42px 58px;
+    }
+
+    .e-portada > * {
+      min-width: 0;
+    }
+
+    .e-portada h1 {
+      margin-top: 18px;
+      font-size: clamp(2.6rem, 4.5vw, 4.1rem);
+      line-height: 1.08;
+      letter-spacing: -2px;
+    }
+
+    .e-portada h1 span {
+      display: block;
+      color: var(--cyan-text);
+    }
+
+    .e-portada-texto {
+      margin-top: 24px;
+      max-width: 520px;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .e-portada .button {
+      margin-top: 26px;
+    }
+
+    .e-portada-imagen {
+      margin: 0;
+    }
+
+    .e-portada-imagen img {
+      display: block;
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 90px 20px 20px 20px;
+      background: var(--ice);
+    }
+
+    /* FOTOGRAFÍAS DE PRODUCTOS */
+    .e-foto {
+      margin: 26px 0 0;
+    }
+
+    .e-foto img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 48px 16px 16px 16px;
+      background: var(--ice);
+    }
+
+    .e-indice {
+      scroll-margin-top: 100px;
+      padding-block: 25px;
+      background: #f4f8fb;
+      border-block: 1px solid var(--line);
+    }
+
+    .e-indice .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 25px;
+    }
+
+    .e-indice a {
+      padding-block: 8px;
+      font-weight: 600;
+      font-size: .9375rem;
+    }
+
+    .e-indice a:hover {
+      color: var(--cyan-text);
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+    .e-producto {
+      display: grid;
+      grid-template-columns: minmax(0, .85fr) minmax(0, 1.3fr);
+      gap: 65px;
+      padding-block: 62px;
+      border-bottom: 1px solid var(--line);
+      scroll-margin-top: 110px;
+    }
+
+    .e-producto > * {
+      min-width: 0;
+    }
+
+    .e-titulo .product-icon {
+      margin-bottom: 22px;
+    }
+
+    .e-titulo .product-icon img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    .e-titulo h2 {
+      margin-top: 14px;
+      font-size: clamp(1.9rem, 2.8vw, 2.65rem);
+      line-height: 1.2;
+      letter-spacing: -1px;
+    }
+
+    .e-intro {
+      color: var(--text);
+      font-size: 1.0625rem;
+      line-height: 1.8;
+    }
+
+    .e-contenido h3 {
+      margin: 24px 0 12px;
+      font-size: 1.0625rem;
+      line-height: 1.4;
+    }
+
+    .e-lista {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .e-lista li {
+      margin-bottom: 10px;
+      padding-left: 3px;
+      line-height: 1.7;
+    }
+
+    .e-lista li::marker {
+      color: var(--cyan-text);
+    }
+
+    .e-lista strong {
+      color: var(--navy);
+    }
+
+    .e-datos {
+      margin-top: 22px;
+      padding: 18px 20px;
+      background: #f4f8fb;
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 9px 9px 0;
+      font-size: .9375rem;
+      line-height: 1.7;
+    }
+
+    .e-datos strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .e-accion {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .e-accion .button {
+      max-width: 100%;
+      white-space: normal;
+    }
+
+    /* PREGUNTAS FRECUENTES */
+    .e-pregunta {
+      margin-top: 23px;
+      border-top: 1px solid var(--line);
+    }
+
+    .e-pregunta summary {
+      padding: 17px 0;
+      cursor: pointer;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .e-pregunta p {
+      padding-bottom: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .e-pregunta summary:focus-visible {
+      outline: 3px solid var(--cyan);
+      outline-offset: 4px;
+    }
+
+    .e-faq {
+      padding-block: 42px 18px;
+    }
+
+    .e-faq h2 {
+      font-size: clamp(1.6rem, 2.5vw, 2rem);
+    }
+
+    .e-condiciones {
+      padding-block: 24px 40px;
+      color: var(--muted);
+      font-size: .8125rem;
+      line-height: 1.7;
+    }
+
+    /* CIERRE */
+    .e-cierre {
+      padding-block: 48px;
+      background: var(--ice);
+    }
+
+    .e-cierre .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .e-cierre h2 {
+      font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+      max-width: 660px;
+    }
+
+    .e-cierre p {
+      margin-top: 14px;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 620px;
+    }
+    .e-estado {
+      padding: 18px;
+      margin-top: 25px;
+      background: #fff2f0;
+      border: 1px solid #efd5d0;
+      border-radius: 9px;
+    }
+
+    .e-estado a {
+      text-decoration: underline;
+    }
+
+    .pagina-empresas #dialog-icon img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    /* TABLETS */
+    @media (max-width: 1000px) {
+      .e-portada {
+        gap: 32px;
+      }
+
+      .e-portada-imagen img {
+        height: 390px;
+      }
+
+      .e-producto {
+        gap: 36px;
+      }
+    }
+
+    /* CELULARES */
+    @media (max-width: 760px) {
+      .e-portada {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-block: 28px 36px;
+      }
+
+      .e-portada h1 {
+        letter-spacing: -1.4px;
+      }
+
+      .e-portada-imagen img {
+        height: 340px;
+        border-top-left-radius: 65px;
+      }
+
+      .e-producto {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-block: 38px;
+        scroll-margin-top: 88px;
+      }
+
+      .e-titulo .product-icon {
+        margin-bottom: 16px;
+      }
+
+      .e-foto {
+        margin-top: 22px;
+      }
+
+      .e-foto img {
+        aspect-ratio: 3 / 2;
+        border-top-left-radius: 40px;
+      }
+
+      .e-indice .container {
+        gap: 4px 20px;
+      }
+
+      .e-indice a {
+        font-size: .875rem;
+      }
+
+      .e-cierre .container {
+        display: block;
+      }
+
+      .e-cierre .button {
+        margin-top: 22px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .e-portada-imagen img {
+        height: 280px;
+      }
+
+      .e-accion .button {
+        width: 100%;
+      }
+
+      .e-datos {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body class="pagina-empresas">
+
+  <a class="skip-link" href="#contenido">
+    Saltar al contenido
+  </a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container navigation">
+
+      <!-- LOGO DEL HEADER -->
+      <a
+        class="brand"
+        href="./index.html"
+        aria-label="Market de Seguros, inicio"
+      >
+        <img
+          src="./img/market-logo.png"
+          alt="Market de Seguros"
+          style="width:150px; max-width:28vw; height:auto;"
+        >
+      </a>
+
+      <nav class="desktop-nav" aria-label="Navegación principal">
+        <a href="./personas.html">Personas</a>
+        <a href="./empresa.html" aria-current="page">Empresas</a>
+        <a href="./escuela.html">Escolar</a>
+        <a href="./nosotros.html">Nosotros</a>
+        <a href="./recursos.html">Blog</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+
+      <a
+        class="button button-navy header-quote"
+        href="https://wa.me/527771193499?text=Hola,%20deseo%20cotizar%20en%20línea"
+      >
+        Cotizar en línea
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <span data-icon="menu" aria-hidden="true"></span>
+      </button>
+
+    </div>
+
+    <nav
+      class="mobile-nav"
+      id="mobile-nav"
+      aria-label="Navegación móvil"
+      hidden
+    >
+      <a href="./personas.html">Personas</a>
+      <a href="./empresa.html" aria-current="page">Empresas</a>
+      <a href="./escuela.html">Escolar</a>
+      <a href="./nosotros.html">Nosotros</a>
+      <a href="./recursos.html">Blog</a>
+      <a href="./contacto.html">Contacto</a>
+      <a href="#seguros-empresas">Cotizar en línea</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <nav class="container e-ruta" aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="./index.html">Inicio</a></li>
+        <li aria-current="page">Empresas</li>
+      </ol>
+    </nav>
+
+    <!-- PORTADA -->
+    <section
+      class="container e-portada"
+      aria-labelledby="empresas-titulo"
+    >
+      <div>
+        <p class="eyebrow">SEGUROS PARA EMPRESAS Y NEGOCIOS</p>
+
+        <h1 id="empresas-titulo">
+          Tu negocio crece con el trabajo de todos.
+          <span>Protégelo.</span>
+        </h1>
+
+        <p class="e-portada-texto">
+          Detrás de una empresa hay personas, equipo, operaciones
+          y compromisos. Conoce opciones para proteger lo que
+          permite que tu negocio funcione, de acuerdo con su
+          actividad y sus necesidades.
+        </p>
+
+        <a class="button button-navy" href="#seguros-empresas">
+          Explorar seguros para mi empresa
+          <span data-icon="arrow-right" aria-hidden="true"></span>
+        </a>
+      </div>
+      <figure class="e-portada-imagen">
+        <img
+          src="./img/teamwork.svg"
+          alt="Un equipo de trabajo comparte ideas frente a una computadora"
+          width="1200"
+          height="1000"
+          fetchpriority="high"
+        >
+      </figure>
+    </section>
+    <nav
+      class="e-indice"
+      id="seguros-empresas"
+      aria-label="Seguros para empresas"
+    >
+      <div class="container">
+        <a href="#flotillas">Flotillas</a>
+        <a href="#vida-grupo">Vida Grupo</a>
+        <a href="#responsabilidad-civil">Responsabilidad civil</a>
+        <a href="#proteccion-pymes">Protección para Pymes</a>
+
+        <a href="#gastos-medicos-colectivos">
+          Gastos Médicos Colectivos
+        </a>
+
+        <a href="#transporte-mercancias">
+          Transporte de mercancías
+        </a>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <p
+        class="e-estado"
+        id="empresas-estado"
+        role="status"
+        hidden
+      >
+        No pudimos cargar los formularios. Actualiza la página o
+        <a href="./index.html#contacto">
+          contacta a nuestro equipo
+        </a>.
+      </p>
+
+      <noscript>
+        <p class="e-datos">
+          Activa JavaScript para abrir los formularios.
+          También puedes
+          <a href="mailto:ventas@marketdeseguros.com">escribirnos</a>.
+        </p>
+      </noscript>
+      <section
+        class="e-producto"
+        id="flotillas"
+        data-nombre="Flotillas"
+        aria-labelledby="flotillas-titulo"
+      >
+        <div class="e-titulo"> 
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono- flotilla.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">FLOTILLAS</p>
+
+          <h2 id="flotillas-titulo">
+            Tus vehículos mueven tu negocio.
+          </h2>
+          <figure class="e-foto">
+            <img
+              src="./img/flotilla.svg"
+              alt="Varios vehículos estacionados"
+              width="900"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+        </div>
+
+        <div class="e-contenido">
+          <p class="e-intro">
+            Tus vehículos forman parte de tu operación. Revisa
+            opciones para protegerlos de acuerdo con su uso,
+            sus características y el trabajo que realizan.
+          </p>
+
+          <h3>¿Qué revisamos para preparar tu propuesta?</h3>
+
+          <ul class="e-lista">
+            <li>
+              <strong>Las unidades:</strong>
+              cantidad, tipo de vehículo, modelo y características
+              de cada una.
+            </li>
+
+            <li>
+              <strong>Su operación:</strong>
+              uso particular o comercial, recorridos y zonas
+              de circulación.
+            </li>
+
+            <li>
+              <strong>La protección:</strong>
+              coberturas, sumas aseguradas y deducibles de cada
+              vehículo.
+            </li>
+
+            <li>
+              <strong>La administración:</strong>
+              condiciones para altas, bajas y renovaciones de
+              la flotilla.
+            </li>
+          </ul>
+
+          <div class="e-datos">
+            <strong>Ten a la mano</strong>
+            Una relación de tus vehículos y una descripción de
+            cómo los utilizas. Te orientaremos sobre la
+            información necesaria para cotizar.
+          </div>
+
+          <details class="e-pregunta">
+            <summary>
+              ¿Todas las unidades deben tener la misma cobertura?
+            </summary>
+            <p>
+              Revisaremos las alternativas disponibles según las
+              características y el uso de cada unidad, así como
+              las condiciones del esquema de flotilla.
+            </p>
+          </details>
+
+          <div class="e-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Flotillas"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Solicitar cotización de flotilla
+              <span data-icon="arrow-right" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="e-producto"
+        id="vida-grupo"
+        data-nombre="Vida Grupo"
+        aria-labelledby="vida-grupo-titulo"
+      >
+        <div class="e-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono-persona.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">VIDA GRUPO</p>
+
+          <h2 id="vida-grupo-titulo">
+            Un respaldo para quienes trabajan contigo.
+          </h2>
+          <figure class="e-foto">
+            <img
+              src="./img/team-manos.svg"
+              alt="Colaboradores reunidos alrededor de sus computadoras en una oficina"
+              width="900"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+        </div>
+
+        <div class="e-contenido">
+          <p class="e-intro">
+            Tu equipo es parte de lo que has construido. Conoce
+            opciones de protección de vida para tus colaboradores
+            y el respaldo que pueden ofrecer a sus beneficiarios.
+          </p>
+
+          <h3>Una propuesta de acuerdo con tu equipo</h3>
+
+          <ul class="e-lista">
+            <li>
+              <strong>Composición del grupo:</strong>
+              número de colaboradores, edades y ocupaciones.
+            </li>
+
+            <li>
+              <strong>Protección deseada:</strong>
+              suma asegurada y coberturas disponibles para el grupo.
+            </li>
+
+            <li>
+              <strong>Incorporación:</strong>
+              requisitos de ingreso, límites de edad y condiciones
+              de aceptación.
+            </li>
+
+            <li>
+              <strong>Seguimiento:</strong>
+              procedimiento para actualizar integrantes y
+              beneficiarios.
+            </li>
+          </ul>
+
+          <div class="e-datos">
+            <strong>Empieza por las características del grupo</strong>
+            Cuéntanos cuántas personas deseas asegurar y qué
+            actividades realizan. Te indicaremos qué información
+            se requiere para continuar.
+          </div>
+
+          <details class="e-pregunta">
+            <summary>
+              ¿Qué sucede cuando entra o sale un colaborador?
+            </summary>
+            <p>
+              Los movimientos deben realizarse conforme al
+              procedimiento y los plazos establecidos en la póliza.
+              Es importante revisar la fecha en que comienza o
+              termina la protección de cada persona.
+            </p>
+          </details>
+
+          <div class="e-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Vida Grupo"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Solicitar cotización de Vida Grupo
+              <span data-icon="arrow-right" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="e-producto"
+        id="responsabilidad-civil"
+        data-nombre="Responsabilidad civil"
+        aria-labelledby="rc-titulo"
+      >
+        <div class="e-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono-escudo.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+          <p class="eyebrow">RESPONSABILIDAD CIVIL</p>
+
+          <h2 id="rc-titulo">
+            Tu actividad también implica responsabilidades.
+          </h2>
+
+          <figure class="e-foto">
+            <img
+              src="./img/negocio.svg"
+              alt="Mesas y área de servicio en el interior de una cafetería"
+              width="900"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+        </div>
+
+        <div class="e-contenido">
+          <p class="e-intro">
+            La actividad de tu negocio puede generar daños a otras
+            personas o a sus bienes. Revisa qué protección corresponde
+            a los riesgos de tu operación.
+          </p>
+
+          <h3>La actividad de tu empresa es el punto de partida</h3>
+
+          <ul class="e-lista">
+            <li>
+              <strong>Lo que haces:</strong>
+              giro, servicios y actividades que deben declararse
+              en la propuesta.
+            </li>
+
+            <li>
+              <strong>Dónde operas:</strong>
+              características de tus instalaciones y lugares donde
+              realizas tu trabajo.
+            </li>
+
+            <li>
+              <strong>El alcance:</strong>
+              responsabilidades contempladas, límites de cobertura
+              y deducibles.
+            </li>
+
+            <li>
+              <strong>Las condiciones:</strong>
+              exclusiones y requisitos aplicables a tu actividad.
+            </li>
+          </ul>
+
+          <div class="e-datos">
+            <strong>Describe tu operación con precisión</strong>
+            La propuesta debe considerar las actividades que
+            realmente realiza tu empresa. Si cambian, conviene
+            revisar también la protección contratada.
+          </div>
+
+          <details class="e-pregunta">
+            <summary>
+              ¿El mismo seguro sirve para cualquier negocio?
+            </summary>
+            <p>
+              No. Las necesidades de un restaurante, una oficina
+              o un prestador de servicios pueden ser distintas.
+              La propuesta se revisa de acuerdo con la actividad
+              y el alcance de protección solicitado.
+            </p>
+          </details>
+
+          <div class="e-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Responsabilidad civil"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Solicitar cotización de responsabilidad civil
+              <span data-icon="arrow-right" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="e-producto"
+        id="proteccion-pymes"
+        data-nombre="Protección para Pymes"
+        aria-labelledby="pymes-titulo"
+      >
+        <div class="e-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono-empresa.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">PROTECCIÓN PARA PYMES</p>
+
+          <h2 id="pymes-titulo">
+            Cuida lo que has construido para tu negocio.
+          </h2>
+          <figure class="e-foto">
+            <img
+              src="./img/pymes.svg"
+              alt="Una persona atiende el mostrador de una cafetería y utiliza una tableta"
+              width="900"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+        </div>
+
+        <div class="e-contenido">
+          <p class="e-intro">
+            Cada negocio tiene una forma distinta de trabajar.
+            Revisemos qué necesitas proteger: tu local, tus equipos,
+            tus contenidos y las actividades que realizas.
+          </p>
+
+          <h3>Identifica lo que necesitas asegurar</h3>
+
+          <ul class="e-lista">
+            <li>
+              <strong>Tu espacio:</strong>
+              giro del negocio, ubicación y características del
+              inmueble.
+            </li>
+
+            <li>
+              <strong>Tus bienes:</strong>
+              mobiliario, equipos, inventario y valores que deseas
+              considerar.
+            </li>
+
+            <li>
+              <strong>Tus riesgos:</strong>
+              situaciones para las que buscas protección y
+              coberturas disponibles.
+            </li>
+
+            <li>
+              <strong>Tu propuesta:</strong>
+              sumas aseguradas, deducibles y condiciones de cada
+              cobertura.
+            </li>
+          </ul>
+
+          <div class="e-datos">
+            <strong>Una propuesta parte de conocer tu negocio</strong>
+            En tu solicitud puedes contarnos a qué te dedicas y
+            qué bienes te interesa proteger. Te ayudaremos a
+            identificar los datos necesarios para cotizar.
+          </div>
+
+          <details class="e-pregunta">
+            <summary>¿Qué pasa si el local es rentado?</summary>
+            <p>
+              Indícalo al solicitar tu propuesta. Revisaremos qué
+              bienes necesitas asegurar y las responsabilidades
+              relacionadas con el uso del inmueble, según las
+              condiciones del producto.
+            </p>
+          </details>
+
+          <div class="e-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Protección para Pymes"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Solicitar una propuesta para mi negocio
+              <span data-icon="arrow-right" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- GASTOS MÉDICOS COLECTIVOS -->
+      <section
+        class="e-producto"
+        id="gastos-medicos-colectivos"
+        data-nombre="Gastos Médicos Colectivos"
+        aria-labelledby="colectivos-titulo"
+      >
+        <div class="e-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono-empresa.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">GASTOS MÉDICOS COLECTIVOS</p>
+
+          <h2 id="colectivos-titulo">
+            El bienestar de tu equipo también cuenta.
+          </h2>
+          <figure class="e-foto">
+            <img
+              src="./img/gmm-colectivo.svg"
+              alt="Una doctora conversa con una paciente durante una consulta"
+              width="900"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+        </div>
+
+        <div class="e-contenido">
+          <p class="e-intro">
+            Conoce alternativas de gastos médicos para tu equipo
+            y revisa cómo pueden integrarse a las prestaciones
+            de tu empresa.
+          </p>
+
+          <h3>Más que elegir una red hospitalaria</h3>
+
+          <ul class="e-lista">
+            <li>
+              <strong>Las personas:</strong>
+              características del grupo y dependientes que se
+              busque incorporar.
+            </li>
+
+            <li>
+              <strong>La atención:</strong>
+              red hospitalaria y ámbito de cobertura del plan.
+            </li>
+
+            <li>
+              <strong>La participación en los gastos:</strong>
+              deducible, coaseguro y suma asegurada.
+            </li>
+
+            <li>
+              <strong>La incorporación:</strong>
+              requisitos, periodos de espera y condiciones para
+              altas y bajas.
+            </li>
+          </ul>
+
+          <div class="e-datos">
+            <strong>Revisa las condiciones desde el inicio</strong>
+            La aceptación del grupo y de cada integrante depende
+            de los requisitos del producto. Te orientaremos sobre
+            la información necesaria para evaluar la propuesta.
+          </div>
+
+          <details class="e-pregunta">
+            <summary>
+              ¿Se pueden incluir familiares de los colaboradores?
+            </summary>
+            <p>
+              Depende del plan y de los requisitos de incorporación.
+              Si deseas incluirlos, indícalo para revisar las
+              alternativas disponibles.
+            </p>
+          </details>
+
+          <div class="e-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Gastos Médicos Colectivos"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Solicitar cotización para mi equipo
+              <span data-icon="arrow-right" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRANSPORTE DE MERCANCÍAS -->
+      <section
+        class="e-producto"
+        id="transporte-mercancias"
+        data-nombre="Transporte de mercancías"
+        aria-labelledby="transporte-titulo"
+      >
+        <div class="e-titulo">
+          <div class="product-icon">
+            <img
+              src="./img/iconos/icono-transporte.png"
+              alt=""
+              loading="lazy"
+            >
+          </div>
+
+          <p class="eyebrow">TRANSPORTE DE MERCANCÍAS</p>
+
+          <h2 id="transporte-titulo">
+            Cada envío lleva una parte de tu negocio.
+          </h2>
+
+          <!-- FOTO TRANSPORTE: cambia src por tu fotografía. -->
+          <figure class="e-foto">
+            <img
+              src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&amp;fit=crop&amp;w=900&amp;q=82"
+              alt="Un camión de mercancías recorre una carretera entre montañas"
+              width="900"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+        </div>
+
+        <div class="e-contenido">
+          <p class="e-intro">
+            Comparte los datos del traslado para revisar opciones
+            de protección de la carga, de acuerdo con el tipo
+            de mercancía, su valor y el recorrido.
+          </p>
+
+          <h3>Cada traslado tiene sus propias condiciones</h3>
+
+          <ul class="e-lista">
+            <li>
+              <strong>El recorrido:</strong>
+              lugar de salida, destino y fechas previstas del
+              traslado.
+            </li>
+
+            <li>
+              <strong>La mercancía:</strong>
+              tipo de carga, valor declarado y forma de empaque.
+            </li>
+
+            <li>
+              <strong>El transporte:</strong>
+              medio utilizado y condiciones de manejo y seguridad.
+            </li>
+
+            <li>
+              <strong>La protección:</strong>
+              riesgos contemplados, inicio y fin de la cobertura,
+              límites y exclusiones.
+            </li>
+          </ul>
+
+          <div class="e-datos">
+            <strong>Prepara los datos de tu envío</strong>
+            El formulario solicita origen, destino, fechas de
+            salida y llegada, valor de la carga y tipo de mercancía.
+          </div>
+
+          <details class="e-pregunta">
+            <summary>
+              ¿La solicitud significa que mi carga ya está asegurada?
+            </summary>
+            <p>
+              No. Enviar el formulario inicia la solicitud de
+              cotización. La cobertura comienza conforme a la
+              aceptación, contratación y vigencia establecidas
+              en la póliza.
+            </p>
+          </details>
+
+          <div class="e-accion">
+            <button
+              class="button button-navy"
+              type="button"
+              data-producto="Transporte de mercancías"
+              data-solicitud
+              disabled
+              aria-haspopup="dialog"
+              aria-controls="product-dialog"
+            >
+              Solicitar cotización de mercancías
+              <span data-icon="arrow-right" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PREGUNTAS GENERALES -->
+      <section class="e-faq" aria-labelledby="preguntas-titulo">
+        <h2 id="preguntas-titulo">
+          Antes de solicitar tu propuesta
+        </h2>
+
+        <details class="e-pregunta">
+          <summary>
+            ¿Puedo revisar varios seguros para mi empresa?
+          </summary>
+          <p>
+            Sí. Puedes solicitar información de cada producto o
+            contarnos en los comentarios qué otras necesidades
+            tiene tu negocio.
+          </p>
+        </details>
+
+        <details class="e-pregunta">
+          <summary>
+            ¿Qué sucede después de enviar el formulario?
+          </summary>
+          <p>
+            Recibiremos tus datos junto con el seguro seleccionado
+            para revisar tu solicitud y dar seguimiento por los
+            medios de contacto que nos compartas.
+          </p>
+        </details>
+      </section>
+
+      <p class="e-condiciones">
+        La información es orientativa. Las coberturas, sumas
+        aseguradas, deducibles, exclusiones y requisitos dependen
+        del producto y de la aseguradora. Enviar una solicitud
+        no implica aceptación del riesgo ni inicio de cobertura.
+      </p>
+
+    </div>
+
+    <!-- CIERRE -->
+    <section class="e-cierre" aria-labelledby="ayuda-titulo">
+      <div class="container">
+        <div>
+          <h2 id="ayuda-titulo">
+            Hablemos de lo que mueve a tu empresa.
+          </h2>
+
+          <p>
+            Comparte las necesidades de tu negocio y revisemos
+            las opciones disponibles.
+          </p>
+        </div>
+
+        <a
+          class="button button-navy"
+          href="./index.html#contacto"
+        >
+          Contactar a Market
+          <span data-icon="arrow-right" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER COMPARTIDO -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a
+            class="brand brand-white"
+            href="./index.html"
+            aria-label="Market de Seguros, inicio"
+          >
+            <!-- LOGO DEL FOOTER -->
+            <img
+              src="./img/market-blanco.png"
+              alt="Market de Seguros"
+              style="width:150px; height:auto;"
+            >
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Tu protección</h2>
+          <a href="./personas.html">Personas y familias</a>
+          <a href="./empresa.html">Empresas y negocios</a>
+          <a href="./escuela.html">Comunidad escolar</a>
+        </div>
+
+        <div class="footer-column">
+          <h2>Estamos cerca</h2>
+
+          <a href="./nosotros.html">Conoce Market</a>
+
+          <a href="./seguro-auto.html">
+            Cotiza en línea ↗
+          </a>
+
+          <a
+            href="https://www.facebook.com/segurosyfianzasmultimarca"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Síguenos en Facebook ↗
+            <span class="sr-only"> (abre otra pestaña)</span>
+          </a>
+        </div>
+
+        <div class="footer-column footer-address">
+          <h2>Visítanos en Morelos</h2>
+
+          <p>
+            Av. Plan de Ayala 1759, local B-20.<br>
+            Plaza Cascada, col. Jacarandas, 62420.<br>
+            Cuernavaca, Morelos.
+          </p>
+
+          <a href="tel:+527771193499">777 119 34 99</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © <span id="year">2026</span> Market de Seguros.
+          Todos los derechos reservados.
+        </p>
+
+        <a href="./avisoprivacidad.html">
+          Aviso de privacidad
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!--
+    VENTANA DE SOLICITUD
+    solicitudes.js inserta aquí el formulario correspondiente.
+  -->
+  <dialog
+    id="product-dialog"
+    class="product-dialog"
+    aria-labelledby="dialog-title"
+    aria-describedby="dialog-description"
+  >
+    <button
+      id="close-dialog"
+      class="dialog-close"
+      type="button"
+      aria-label="Cerrar formulario"
+    >
+      <span data-icon="x" aria-hidden="true"></span>
+    </button>
+
+    <div id="dialog-icon" class="product-icon"></div>
+
+    <p class="eyebrow">SOLICITUD DE COTIZACIÓN</p>
+
+    <h2 id="dialog-title"></h2>
+    <p id="dialog-description"></p>
+
+    <!-- Elemento requerido por solicitudes.js. -->
+    <a
+      id="dialog-email"
+      class="button button-navy"
+      hidden
+    >
+      Solicitar cotización
+    </a>
+  </dialog>
+
+  <script>
+    /*
+      ICONOS DE INTERFAZ
+      Cambia aquí las rutas para utilizar tus propios archivos.
+    */
+    const iconosInterfaz = {
+      'arrow-right': './img/icon-flecha.svg',
+      'arrow-up-right': './img/icon-diagonal.svg',
+      'menu': './img/icon-sandwich.svg',
+      'x': './img/icon-close.svg'
+    };
+
+    function icon(nombre) {
+      const archivo = iconosInterfaz[nombre];
+
+      if (!archivo) return '';
+
+      const elemento = document.createElement('span');
+
+      elemento.className = 'icon icon-mask';
+      elemento.setAttribute('aria-hidden', 'true');
+
+      elemento.style.setProperty(
+        '--icon-file',
+        'url("' + archivo + '")'
+      );
+
+      return elemento.outerHTML;
+    }
+
+    const products = {
+      empresas: [
+        ...document.querySelectorAll('.e-producto[data-nombre]')
+      ].map(seccion => ({
+        name: seccion.dataset.nombre,
+        detail: seccion.querySelector('.e-intro').textContent,
+        image: seccion
+          .querySelector('.product-icon img')
+          .getAttribute('src')
+      }))
+    };
+
+    const dialog = document.getElementById('product-dialog');
+
+    let ultimoBoton = null;
+
+    /*
+      solicitudes.js amplía esta función con los campos
+      y las validaciones correspondientes.
+    */
+    function openProduct(categoria, indice) {
+      const producto = products[categoria]?.[indice];
+
+      if (!producto) return;
+
+      ultimoBoton = document.activeElement;
+
+      document.getElementById('dialog-title').textContent =
+        producto.name;
+
+      document.getElementById('dialog-description').textContent =
+        producto.detail;
+
+      const imagen = document.createElement('img');
+
+      imagen.src = producto.image;
+      imagen.alt = '';
+
+      document.getElementById('dialog-icon').replaceChildren(imagen);
+
+      if (!dialog.open) {
+        dialog.showModal();
+      }
+
+      document.body.classList.add('dialog-open');
+      dialog.scrollTop = 0;
+    }
+
+    /* ABRIR EL FORMULARIO DEL PRODUCTO SELECCIONADO */
+    document.querySelectorAll('[data-producto]').forEach(boton => {
+      boton.addEventListener('click', () => {
+        const indice = products.empresas.findIndex(
+          producto => producto.name === boton.dataset.producto
+        );
+
+        if (indice < 0) return;
+
+        openProduct('empresas', indice);
+      });
+    });
+
+    /* CERRAR FORMULARIO */
+    document
+      .getElementById('close-dialog')
+      .addEventListener('click', () => {
+        dialog.close();
+      });
+
+    dialog.addEventListener('close', () => {
+      document.body.classList.remove('dialog-open');
+
+      ultimoBoton?.focus({
+        preventScroll: true
+      });
+    });
+
+    /* Cerrar al hacer clic fuera de la ventana. */
+    dialog.addEventListener('click', evento => {
+      if (evento.target !== dialog) return;
+
+      const borde = dialog.getBoundingClientRect();
+
+      const fuera =
+        evento.clientX < borde.left ||
+        evento.clientX > borde.right ||
+        evento.clientY < borde.top ||
+        evento.clientY > borde.bottom;
+
+      if (fuera) {
+        dialog.close();
+      }
+    });
+
+    /* MENÚ PRINCIPAL EN CELULARES Y TABLETS */
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    function cambiarMenu(abierto) {
+      mobileNav.hidden = !abierto;
+
+      menuToggle.setAttribute(
+        'aria-expanded',
+        String(abierto)
+      );
+
+      menuToggle.setAttribute(
+        'aria-label',
+        abierto ? 'Cerrar menú' : 'Abrir menú'
+      );
+
+      menuToggle.innerHTML = icon(
+        abierto ? 'x' : 'menu'
+      );
+    }
+
+    menuToggle.addEventListener('click', () => {
+      cambiarMenu(mobileNav.hidden);
+    });
+
+    mobileNav.querySelectorAll('a').forEach(enlace => {
+      enlace.addEventListener('click', () => {
+        cambiarMenu(false);
+      });
+    });
+
+    document.addEventListener('keydown', evento => {
+      if (evento.key === 'Escape' && !mobileNav.hidden) {
+        cambiarMenu(false);
+        menuToggle.focus();
+      }
+    });
+
+    document.addEventListener('click', evento => {
+      if (
+        !mobileNav.hidden &&
+        !evento.target.closest('.header')
+      ) {
+        cambiarMenu(false);
+      }
+    });
+
+    matchMedia('(min-width: 921px)').addEventListener(
+      'change',
+      evento => {
+        if (evento.matches) {
+          cambiarMenu(false);
+        }
+      }
+    );
+
+    /* COLOCAR ICONOS DE INTERFAZ */
+    document.querySelectorAll('[data-icon]').forEach(elemento => {
+      elemento.innerHTML = icon(elemento.dataset.icon);
+    });
+
+    /* ACTUALIZAR AÑO DEL FOOTER */
+    document.getElementById('year').textContent =
+      String(new Date().getFullYear());
+
+    /* HABILITAR BOTONES CUANDO EL FORMULARIO ESTÉ LISTO */
+    document.addEventListener(
+      'DOMContentLoaded',
+      () => {
+        const disponible = Boolean(
+          document.getElementById('solicitud-cotizacion')
+        );
+
+        document
+          .querySelectorAll('[data-solicitud]')
+          .forEach(boton => {
+            boton.disabled = !disponible;
+          });
+
+        document.getElementById('empresas-estado').hidden =
+          disponible;
+      },
+      { once: true }
+    );
+  </script>
+
+</body>
+</html>
